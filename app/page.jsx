@@ -27,13 +27,33 @@ export default function MihasWebsite() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
+    
+    // Hash-based Routing Persistence
+    const syncFromHash = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash) {
+        const [view, sub] = hash.split('/');
+        // Validate if the view exists in our navigation (basic check)
+        setCurrentView(view || 'home');
+        setSubView(sub || 'overview');
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('hashchange', syncFromHash);
+    
+    // Initial sync
+    syncFromHash();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('hashchange', syncFromHash);
+    };
   }, []);
 
   const navigate = (viewId, subId = 'overview') => {
-    setCurrentView(viewId);
-    setSubView(subId);
+    // Update hash which triggers syncFromHash via listener
+    window.location.hash = subId === 'overview' ? viewId : `${viewId}/${subId}`;
     setIsMobileMenuOpen(false);
     window.scrollTo(0, 0);
   };

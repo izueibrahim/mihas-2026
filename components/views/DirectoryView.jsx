@@ -45,7 +45,7 @@ const DirectoryView = ({ onOpenForm }) => {
                                 <p className="font-label uppercase tracking-widest opacity-50 text-xs">Loading Exhibitor Directory Document...</p>
                             </div>
                         </div>
-                        
+
                         {/* Standard Embed (Scrollable by default in all browsers) */}
                         <embed
                             src={`${pdfPath}#toolbar=0&navpanes=0&scrollbar=1`}
@@ -53,23 +53,6 @@ const DirectoryView = ({ onOpenForm }) => {
                             className="w-full h-full relative z-10"
                             title="MIHAS e-Directory PDF"
                         />
-                    </div>
-                </Card>
-
-                {/* Exhibitor Access CTA Refined */}
-                <Card className="p-10 lg:p-20 bg-slate-900 text-white border-none rounded-[40px] shadow-2xl relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-12">
-                    <div className="absolute top-0 right-0 w-96 h-96 bg-orange-600/10 rounded-full translate-x-1/2 -translate-y-1/2 blur-[100px]"></div>
-                    <div className="relative z-10 text-center lg:text-left max-w-2xl">
-                        <h2 className="font-h1 text-white mb-6 italic uppercase leading-none tracking-tighter">Are you an <br/><span className="text-orange-500">Exhibitor?</span></h2>
-                        <p className="font-body-lg text-slate-400 italic leading-relaxed">Ensure your company profile is up-to-date in the directory to attract more global buyers and industry leaders.</p>
-                    </div>
-                    <div className="flex flex-col sm:flex-row gap-5 relative z-10 w-full lg:w-auto">
-                        <Button onClick={() => onOpenForm?.('exhibitor')} className="w-full sm:w-auto px-12 py-6 font-button bg-white text-slate-900 hover:bg-orange-600 hover:text-white transition-all shadow-xl">
-                            Book My Space
-                        </Button>
-                        <Button className="w-full sm:w-auto px-12 py-6 font-button bg-orange-600 text-white hover:bg-orange-500 transition-all shadow-xl shadow-orange-950/20">
-                            Login to Portal
-                        </Button>
                     </div>
                 </Card>
             </div>
