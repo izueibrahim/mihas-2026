@@ -14,17 +14,17 @@ const Header = ({ navLinks, currentView, navigate, isMobileMenuOpen, setIsMobile
   return (
     <header className="sticky top-0 w-full z-50 bg-white shadow-sm border-b border-slate-100">
       <div className="mx-auto flex items-center h-[72px] md:h-[88px]">
-        
+
         {/* Dark Logo Box */}
         <div className="bg-slate-900 h-full flex items-center px-8 shrink-0">
           <button
             onClick={() => handleNavigate('home')}
             className="flex items-center group"
           >
-            <img 
-              src="/src/logo.png" 
-              alt="MIHAS 2026" 
-              className="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105" 
+            <img
+              src="/src/logo.png"
+              alt="MIHAS 2026"
+              className="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105"
             />
           </button>
         </div>
@@ -55,9 +55,8 @@ const Header = ({ navLinks, currentView, navigate, isMobileMenuOpen, setIsMobile
 
                 {/* Luxury Dropdown */}
                 {link.subs && hoveredLink === link.id && (
-                  <div className={`absolute top-[75px] w-72 bg-white shadow-2xl border border-slate-100 rounded-3xl py-4 animate-in fade-in slide-in-from-top-2 duration-300 overflow-hidden ring-1 ring-slate-900/5 ${
-                    navLinks.indexOf(link) > navLinks.length - 3 ? 'right-0' : 'left-0'
-                  }`}>
+                  <div className={`absolute top-[75px] w-72 bg-white shadow-2xl border border-slate-100 rounded-3xl py-4 animate-in fade-in slide-in-from-top-2 duration-300 overflow-hidden ring-1 ring-slate-900/5 ${navLinks.indexOf(link) > navLinks.length - 3 ? 'right-0' : 'left-0'
+                    }`}>
                     <div className="px-6 py-2 mb-2">
                       <p className="font-label text-slate-300">{link.label} Explore</p>
                     </div>
