@@ -32,24 +32,24 @@ const ProgrammeView = () => {
                             </thead>
                             <AnimatePresence mode="wait">
                                 <motion.tbody key={activeDay} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -15 }} transition={{ duration: 0.3 }} className="divide-y divide-slate-100 bg-white">
-                                {scheduleData[activeDay].map((row, idx) => (
-                                    <tr key={idx} className="hover:bg-slate-50/80 transition-colors group">
-                                        <td className="px-8 py-6 align-top">
-                                            <div className="flex items-center gap-2 text-slate-500 font-body-sm font-bold">
-                                                <Clock size={14} className="text-orange-500" /> {row.time}
-                                            </div>
-                                        </td>
-                                        <td className="px-8 py-6 align-top max-w-md">
-                                            <div className="font-h4 text-slate-800 text-lg group-hover:text-orange-600 transition-colors uppercase italic">{row.event}</div>
-                                        </td>
-                                        <td className="px-8 py-6 align-top">
-                                            <div className="flex items-start gap-2 text-slate-600 font-body-sm font-bold group-hover:text-slate-900 transition-colors">
-                                                <MapPin size={18} className="text-slate-400 shrink-0 mt-0.5" />
-                                                {row.loc}
-                                            </div>
-                                        </td>
-                                    </tr>
-                                ))}
+                                    {scheduleData[activeDay].map((row, idx) => (
+                                        <tr key={idx} className="hover:bg-slate-50/80 transition-colors group">
+                                            <td className="px-8 py-6 align-top">
+                                                <div className="flex items-center gap-2 text-slate-500 font-body-sm font-bold">
+                                                    <Clock size={14} className="text-orange-500" /> {row.time}
+                                                </div>
+                                            </td>
+                                            <td className="px-8 py-6 align-top max-w-md">
+                                                <div className="font-h5 text-slate-800 text-lg group-hover:text-orange-600 transition-colors uppercase font-bold">{row.event}</div>
+                                            </td>
+                                            <td className="px-8 py-6 align-top">
+                                                <div className="flex items-start gap-2 text-slate-600 font-body-sm font-bold group-hover:text-slate-900 transition-colors">
+                                                    <MapPin size={18} className="text-slate-400 shrink-0 mt-0.5" />
+                                                    {row.loc}
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    ))}
                                 </motion.tbody>
                             </AnimatePresence>
                         </table>
