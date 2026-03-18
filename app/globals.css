@@ -12,6 +12,47 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Typography Design System */
+.font-h1 {
+  @apply text-4xl md:text-6xl font-black tracking-tighter leading-[1.1];
+}
+
+.font-h2 {
+  @apply text-3xl md:text-4xl font-black tracking-tight leading-tight;
+}
+
+.font-h3 {
+  @apply text-2xl md:text-3xl font-bold leading-snug tracking-tight;
+}
+
+.font-h4 {
+  @apply text-xl md:text-2xl font-bold tracking-tight;
+}
+
+.font-body-lg {
+  @apply text-lg md:text-xl font-medium leading-relaxed;
+}
+
+.font-body {
+  @apply text-base font-medium leading-relaxed;
+}
+
+.font-body-sm {
+  @apply text-sm font-medium leading-relaxed;
+}
+
+.font-label {
+  @apply text-[10px] md:text-[11px] font-bold uppercase tracking-tight;
+}
+
+.font-nav {
+  @apply text-[11px] md:text-[12px] font-bold uppercase tracking-[0.1em];
+}
+
+.font-button {
+  @apply text-[11px] md:text-[12px] font-bold uppercase tracking-[0.15em];
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -22,5 +63,4 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
