@@ -96,24 +96,24 @@ const Header = ({ navLinks, currentView, navigate, isMobileMenuOpen, setIsMobile
       {/* Mobile Navigation Menu */}
       {isMobileMenuOpen && (
         <div className="xl:hidden absolute top-full left-0 w-full h-[calc(100vh-72px)] bg-white overflow-y-auto border-t border-slate-100 flex flex-col animate-in slide-in-from-right duration-500">
-          <div className="p-6 flex flex-col gap-2">
+          <div className="p-6 flex flex-col gap-1">
             {navLinks.map(link => (
-              <div key={link.id} className="flex flex-col border-b border-slate-50 last:border-0">
+              <div key={link.id} className="flex flex-col border-b border-slate-100 last:border-0">
                 <button
                   onClick={() => handleNavigate(link.id, link.defaultSub)}
-                  className={`p-5 text-left font-bold text-lg uppercase tracking-tight rounded-2xl transition-all flex items-center justify-between ${currentView === link.id ? 'bg-orange-50 text-orange-600' : 'text-slate-900'
+                  className={`p-4 text-left font-bold text-base uppercase tracking-tight rounded-2xl transition-all flex items-center justify-between ${currentView === link.id ? 'bg-orange-50 text-orange-600' : 'text-slate-900'
                     }`}
                 >
                   {link.label}
-                  {link.subs && <ChevronDown size={18} className="text-slate-300" />}
+                  {link.subs && <ChevronDown size={16} className="text-slate-300" />}
                 </button>
                 {link.subs && (
-                  <div className="px-6 pb-4 flex flex-col gap-1">
+                  <div className="px-4 pb-3 flex flex-col gap-0.5">
                     {link.subs.map(sub => (
                       <button
                         key={sub.id}
                         onClick={() => handleNavigate(link.id, sub.id)}
-                        className="p-4 text-left font-label text-slate-400 hover:text-orange-600 rounded-xl hover:bg-orange-50 transition-all"
+                        className="p-3 pl-6 text-left font-medium text-sm text-slate-500 hover:text-orange-600 rounded-xl hover:bg-orange-50 transition-all"
                       >
                         {sub.label}
                       </button>

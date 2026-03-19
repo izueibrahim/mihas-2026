@@ -42,7 +42,7 @@ const VisitorView = ({ subView, setSubView, onOpenForm }) => {
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-orange-600/10 rounded-full translate-x-1/3 -translate-y-1/3"></div>
                                 <h3 className="font-h3 mb-6 italic text-white uppercase">Admission is Free for Trade Visitors</h3>
                                 <p className="font-body text-slate-400 mb-10">Avoid long queues and gain priority entry by pre-registering online. Get your digital badge instantly.</p>
-                                <Button className="w-full py-4 font-button shadow-lg shadow-orange-900/40" onClick={() => onOpenForm('visitor')}>Pre-Register Online Now <ArrowRight size={18} className="ml-2" /></Button>
+                                <Button className="w-full shadow-lg shadow-orange-900/40" onClick={() => onOpenForm('visitor')}>Pre-Register Online Now <ArrowRight size={18} className="ml-2" /></Button>
                             </Card>
                         </div>
 
@@ -110,8 +110,8 @@ const VisitorView = ({ subView, setSubView, onOpenForm }) => {
                                 <p className="font-h4 text-slate-900 mb-2 uppercase italic">MITEC, Kuala Lumpur</p>
                                 <p className="font-body-sm text-slate-500 mb-10 uppercase italic">8 Jalan Dutamas 2, Kompleks Kerajaan, 50480 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</p>
                                 <div className="flex flex-wrap gap-4">
-                                    <Button variant="outline" className="px-8 py-4 font-button">View Map</Button>
-                                    <Button variant="outline" className="px-8 py-4 font-button">Parking Info</Button>
+                                    <Button variant="outline">View Map</Button>
+                                    <Button variant="outline">Parking Info</Button>
                                 </div>
                             </Card>
                             <Card className="p-8 bg-orange-50 border-orange-100 rounded-[32px] flex items-center gap-6">

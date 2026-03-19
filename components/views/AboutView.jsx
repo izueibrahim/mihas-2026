@@ -36,8 +36,8 @@ const AboutView = ({ subView, setSubView, onOpenForm }) => {
                 <p className="font-body text-slate-600">MIHAS 2025 Hybrid Edition combines the best of both conventional exhibition and virtual version. Featuring physical exhibitions together with exhibition booths with full multimedia microsite for product and services showcase.</p>
                 
                 <div className="flex flex-wrap gap-4 mt-12">
-                    <Button className="px-10 py-4 font-black shadow-xl shadow-orange-900/10" onClick={() => onOpenForm('exhibitor')}>Book Exhibition Space</Button>
-                    <Button variant="outline" className="px-10 py-4 font-black" onClick={() => onOpenForm('visitor')}>Register as Visitor</Button>
+                    <Button className="shadow-xl shadow-orange-900/10" onClick={() => onOpenForm('exhibitor')}>Book Exhibition Space</Button>
+                    <Button variant="outline" onClick={() => onOpenForm('visitor')}>Register as Visitor</Button>
                 </div>
               </div>
             </div>

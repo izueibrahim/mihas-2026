@@ -50,7 +50,7 @@ const ContactView = ({ subView, setSubView, onOpenForm }) => (
                                     <label className="font-label text-slate-400">Your Message</label>
                                     <textarea rows="4" className="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-50 transition-all font-medium text-slate-800 resize-none" placeholder="Tell us how we can help..."></textarea>
                                 </div>
-                                <Button className="w-full py-4 font-button shadow-lg shadow-orange-900/10" onClick={() => onOpenForm('visitor')}>Send Inquiry <Send size={18} className="ml-2" /></Button>
+                                <Button className="w-full shadow-lg shadow-orange-900/10" onClick={() => onOpenForm('visitor')}>Send Inquiry <Send size={18} className="ml-2" /></Button>
                             </div>
                         </Card>
                     </div>
@@ -126,7 +126,7 @@ const ContactView = ({ subView, setSubView, onOpenForm }) => (
                         <h3 className="font-h3 mb-4">Interested in Malaysian Products?</h3>
                         <p className="text-slate-400 font-body mb-8 max-w-xl mx-auto">Contact our nearest trade office to discover verified Malaysian suppliers and international trade opportunities.</p>
                         <div className="flex justify-center">
-                            <Button className="font-button px-10">Find Nearest Office</Button>
+                            <Button>Find Nearest Office</Button>
                         </div>
                     </Card>
                 </div>

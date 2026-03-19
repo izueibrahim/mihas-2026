@@ -7,7 +7,7 @@ export function cn(...inputs) {
 }
 
 const Button = ({ children, variant = 'primary', className = '', ...props }) => {
-  const baseStyle = "px-6 py-3 rounded-xl font-button transition-all inline-flex items-center justify-center gap-2";
+  const baseStyle = "px-8 py-4 rounded-xl font-button transition-all inline-flex items-center justify-center gap-2 text-sm";
   const variants = {
     primary: "bg-orange-600 text-white hover:bg-orange-700 shadow-sm",
     secondary: "bg-slate-900 text-white hover:bg-slate-800 shadow-sm",

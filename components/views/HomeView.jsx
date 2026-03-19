@@ -34,16 +34,14 @@ const HomeView = ({ navigate, onOpenForm }) => (
           </motion.p>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.6, ease: 'easeOut' }} className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
             <Button
-              size="lg"
-              className="w-full sm:w-auto bg-orange-600 hover:bg-orange-500 text-white px-10 py-5 font-button shadow-2xl shadow-orange-950/20"
+              className="w-full sm:w-auto bg-orange-600 hover:bg-orange-500 text-white shadow-2xl shadow-orange-950/20"
               onClick={() => onOpenForm('exhibitor')}
             >
-              Book Space <ArrowRight className="ml-2" />
+              Book Space <ArrowRight className="ml-2" size={18} />
             </Button>
             <Button
-              size="lg"
               variant="outline"
-              className="w-full sm:w-auto bg-white/5 backdrop-blur-md border-white/20 text-white px-10 py-5 font-button hover:bg-white hover:text-slate-900 flex justify-center"
+              className="w-full sm:w-auto bg-white/5 backdrop-blur-md border-white/20 text-white hover:bg-white hover:text-slate-900"
               onClick={() => onOpenForm('visitor')}
             >
               Register as Visitor
@@ -67,7 +65,7 @@ const HomeView = ({ navigate, onOpenForm }) => (
           </h2>
           <p className="font-body-lg text-slate-500 italic">The 22nd edition of MIHAS will be a 4-day trade showcase held in Kuala Lumpur, Malaysia, alongside the MIHAS Virtual platform. Since 2004, we've set the standard for Halal excellence.</p>
           <div className="pt-4">
-            <Button variant="outline" className="px-8 py-4 font-black uppercase tracking-widest text-xs border-slate-200" onClick={() => navigate('about')}>About MIHAS Excellence</Button>
+            <Button variant="outline" className="border-slate-200" onClick={() => navigate('about')}>About MIHAS Excellence</Button>
           </div>
         </motion.div>
         <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8 }} className="grid grid-cols-2 gap-y-12 gap-x-8">
@@ -91,8 +89,8 @@ const HomeView = ({ navigate, onOpenForm }) => (
             <h3 className="font-h2 italic uppercase leading-none">Exhibitor<br />Incentives</h3>
             <p className="text-slate-400 font-medium uppercase tracking-tight italic">Unlock unparalleled access to OIC markets and beyond.</p>
             <Button
-              className="bg-white text-slate-900 hover:bg-orange-600 hover:text-white px-10 py-5 font-button"
-              onClick={() => navigate('exhibitor')}
+              className="bg-white text-slate-900 hover:bg-orange-600 hover:text-white"
+              onClick={() => navigate('exhibitor', 'incentives')}
             >
               View Benefits
             </Button>
@@ -105,7 +103,7 @@ const HomeView = ({ navigate, onOpenForm }) => (
             <h3 className="font-h2 italic uppercase leading-none text-slate-900">Registration<br />is Open</h3>
             <p className="text-orange-100 font-body italic">Secure your space before early bird passes expire.</p>
             <Button
-              className="bg-slate-900 text-white hover:bg-white hover:text-slate-900 px-10 py-5 font-button shadow-2xl shadow-orange-950/20 transition-all"
+              className="bg-slate-900 text-white hover:bg-white hover:text-slate-900 shadow-2xl shadow-orange-950/20"
               onClick={() => onOpenForm('exhibitor')}
             >
               Reserve Space Now
@@ -153,7 +151,7 @@ const HomeView = ({ navigate, onOpenForm }) => (
           <div className="space-y-10">
             <div className="flex items-end justify-between border-b border-white/10 pb-6">
               <h2 className="font-h3 italic uppercase">MIHAS Awards 2025</h2>
-              <Button variant="ghost" onClick={() => navigate('awards')} className="text-orange-400 hover:text-white p-0 font-button group hidden sm:flex">The Ceremony <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" /></Button>
+              <Button variant="ghost" onClick={() => navigate('awards')} className="text-orange-400 hover:text-white group hidden sm:flex">The Ceremony <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" /></Button>
             </div>
             <Card className="bg-slate-800 border-slate-700 text-white p-0 overflow-hidden ring-1 ring-white/5 shadow-2xl hover:shadow-orange-900/10 transition-all">
               <div className="h-48 md:h-64 bg-slate-700 relative group overflow-hidden">
@@ -167,7 +165,7 @@ const HomeView = ({ navigate, onOpenForm }) => (
               <div className="p-8 md:p-10 space-y-6">
                 <h3 className="font-h3 italic uppercase underline decoration-orange-500/30 underline-offset-8">Innovation and Sustainability Take Centre Stage</h3>
                 <p className="text-slate-400 leading-relaxed font-medium">The Malaysia International Halal Showcase (MIHAS) Awards 2025 concluded with a celebration of excellence across various halal sectors, setting new benchmarks for the industry.</p>
-                <Button className="bg-white text-slate-900 hover:bg-orange-600 hover:text-white px-8 py-4 font-button" onClick={() => navigate('awards')}>View All Winners</Button>
+                <Button className="bg-white text-slate-900 hover:bg-orange-600 hover:text-white" onClick={() => navigate('awards')}>View All Winners</Button>
               </div>
             </Card>
           </div>
@@ -222,7 +220,7 @@ const HomeView = ({ navigate, onOpenForm }) => (
             ))}
           </div>
           <div className="text-center pt-8">
-            <Button variant="outline" onClick={() => navigate('media', 'blog')} className="border-slate-700 text-slate-500 hover:text-white hover:border-orange-500 font-button px-10 py-5">Enter Blog Archives</Button>
+            <Button variant="outline" onClick={() => navigate('media', 'blog')} className="border-slate-700 text-slate-500 hover:text-white hover:border-orange-500">Enter Blog Archives</Button>
           </div>
         </div>
       </div>

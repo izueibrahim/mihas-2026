@@ -1,6 +1,7 @@
 export const exhibitorTabs = [
     { id: 'why-exhibit', label: 'Why Exhibit' },
-    { id: 'who-should-exhibit', label: 'Who Should Exhibit' }
+    { id: 'who-should-exhibit', label: 'Who Should Exhibit' },
+    { id: 'incentives', label: 'Exhibitor Incentives' }
 ];
 
 export const whyExhibitData = [

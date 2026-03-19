@@ -124,7 +124,7 @@ const AwardsView = ({ onOpenForm }) => (
                                 <div className="mb-6">
                                     <p className="font-label text-slate-400 mb-2">Deadine: 15 Aug 2025</p>
                                 </div>
-                                <Button className="w-full py-5 font-button shadow-xl shadow-orange-900/10" onClick={() => onOpenForm('exhibitor')}>Submit Award Application</Button>
+                                <Button className="w-full shadow-xl shadow-orange-900/10" onClick={() => onOpenForm('exhibitor')}>Submit Award Application</Button>
                             </div>
                         </div>
                     </Card>

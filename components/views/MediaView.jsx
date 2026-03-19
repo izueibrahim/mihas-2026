@@ -51,7 +51,7 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                                 <div className="p-8 bg-orange-50 rounded-[32px] border border-orange-100 shadow-sm">
                                     <h4 className="font-h4 text-slate-900 mb-2 italic uppercase">Media Kit 2025</h4>
                                     <p className="font-body-sm text-slate-600 mb-6">Download official logos, event photos, and pre-show press releases.</p>
-                                    <Button variant="outline" className="w-full bg-white border-orange-200 text-orange-600 hover:bg-orange-50 font-button group">
+                                    <Button variant="outline" className="w-full bg-white border-orange-200 text-orange-600 hover:bg-orange-50 group">
                                         Download Assets <Download size={16} className="ml-2 group-hover:translate-y-0.5 transition-transform" />
                                     </Button>
                                 </div>
@@ -78,7 +78,7 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                                         <label className="font-label text-slate-400 italic">Email Address</label>
                                         <input type="email" className="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-50 transition-all font-body" placeholder="john@media.com" />
                                     </div>
-                                    <Button className="w-full py-4 font-button shadow-lg shadow-orange-900/10" onClick={() => onOpenForm('media')}>Submit Registration <ArrowRight size={18} className="ml-2" /></Button>
+                                    <Button className="w-full shadow-lg shadow-orange-900/10" onClick={() => onOpenForm('media')}>Submit Registration <ArrowRight size={18} className="ml-2" /></Button>
                                     <p className="font-label text-slate-400 text-center italic mt-4">Verification may take up to 3 working days</p>
                                 </div>
                             </Card>
@@ -93,7 +93,7 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                                 <h2 className="font-h2 text-slate-900 mb-2 italic uppercase">Press Releases</h2>
                                 <p className="font-body text-slate-500">Official announcements and news from the organiser.</p>
                             </div>
-                            <Button variant="outline" className="font-button">Filter By Category</Button>
+                            <Button variant="outline">Filter By Category</Button>
                         </div>
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                             {newsData.map((news, i) => (

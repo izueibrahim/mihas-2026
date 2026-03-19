@@ -27,10 +27,10 @@ const DirectoryView = ({ onOpenForm }) => {
                             </div>
                         </div>
                         <div className="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
-                            <Button variant="outline" onClick={() => window.open(pdfPath, '_blank')} className="w-full sm:w-auto font-button text-slate-700 hover:text-orange-600 border-slate-200 px-8 py-4 bg-white">
+                            <Button variant="outline" onClick={() => window.open(pdfPath, '_blank')} className="w-full sm:w-auto text-slate-700 hover:text-orange-600 border-slate-200 bg-white">
                                 <Maximize size={18} className="mr-2" /> Open Fullscreen
                             </Button>
-                            <Button onClick={() => { const a = document.createElement('a'); a.href = pdfPath; a.download = 'MIHAS_Directory.pdf'; a.click(); }} className="w-full sm:w-auto font-button shadow-lg shadow-orange-950/20 px-8 py-4 bg-orange-600 hover:bg-orange-500 text-white leading-none">
+                            <Button onClick={() => { const a = document.createElement('a'); a.href = pdfPath; a.download = 'MIHAS_Directory.pdf'; a.click(); }} className="w-full sm:w-auto shadow-lg shadow-orange-950/20 bg-orange-600 hover:bg-orange-500 text-white">
                                 <Download size={18} className="mr-2" /> Download PDF
                             </Button>
                         </div>

@@ -49,12 +49,12 @@ const ExhibitorView = ({ subView, setSubView, onOpenForm }) => {
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-orange-400 opacity-20 rounded-full translate-x-1/2 -translate-y-1/2"></div>
                                     <h3 className="font-h3 mb-4 italic uppercase text-white">Book Your Space Today</h3>
                                     <p className="font-body mb-8 opacity-90">Secure your spot at MIHAS 2025. Standard and Premium booth allocations are filling up fast.</p>
-                                    <Button variant="secondary" className="w-full text-whitte font-button shadow-lg" onClick={() => onOpenForm('exhibitor')}>Book My Space <ArrowRight size={18} className="ml-2" /></Button>
+                                    <Button variant="secondary" className="w-full shadow-lg" onClick={() => onOpenForm('exhibitor')}>Book My Space <ArrowRight size={18} className="ml-2" /></Button>
                                 </Card>
                                 <Card className="p-8 bg-slate-900 text-white shadow-xl shadow-slate-900/40 relative overflow-hidden">
                                     <h3 className="font-h3 mb-4 italic uppercase text-white">MIHAS Hybrid</h3>
                                     <p className="font-body mb-8 opacity-80">Take your presence beyond the physical floor with MIHAS Virtual and reach global buyers 24/7.</p>
-                                    <Button className="w-full bg-white text-slate-900 hover:bg-slate-100 border-none font-button">Learn About Hybrid</Button>
+                                    <Button className="w-full bg-white text-slate-900 hover:bg-slate-100 border-none">Learn About Hybrid</Button>
                                 </Card>
                             </div>
                         </div>
@@ -106,7 +106,72 @@ const ExhibitorView = ({ subView, setSubView, onOpenForm }) => {
                             <div className="relative z-10">
                                 <h3 className="font-h2 mb-4 italic uppercase text-white">Don't see your category?</h3>
                                 <p className="font-body text-slate-400 mb-8 max-w-xl mx-auto">MIHAS is always expanding to new clusters. Contact us to see how you can fit into the showcase.</p>
-                                <Button variant="secondary" className="px-12 py-4 font-button" onClick={() => onOpenForm('exhibitor')}>Enquire Directly</Button>
+                                <Button variant="secondary" onClick={() => onOpenForm('exhibitor')}>Enquire Directly</Button>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {subView === 'incentives' && (
+                    <div className="space-y-20">
+                        <div className="grid lg:grid-cols-2 gap-16 items-center">
+                            <div className="space-y-6">
+                                <h2 className="font-h1 text-slate-900 italic uppercase">Exhibitor<br/>Incentives</h2>
+                                <p className="font-body-lg text-slate-600 italic">Unlock unparalleled access to OIC markets and beyond. MIHAS offers a comprehensive suite of benefits designed to maximize your exhibition ROI and global reach.</p>
+                                <Button className="bg-orange-600 text-white hover:bg-orange-500" onClick={() => onOpenForm('exhibitor')}>
+                                    Apply Now <ArrowRight size={18} className="ml-2" />
+                                </Button>
+                            </div>
+                            <Card className="p-10 bg-slate-900 text-white border-none shadow-2xl relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-orange-600/10 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+                                <div className="relative z-10 space-y-6">
+                                    <h3 className="font-h3 italic uppercase text-white">Key Benefits</h3>
+                                    <ul className="space-y-4">
+                                        {[
+                                            'Direct access to 80+ country delegations',
+                                            'Pre-matched B2B meetings with verified global buyers',
+                                            'Complimentary listing in the MIHAS e-Directory',
+                                            'Marketing & branding support across MIHAS channels',
+                                            'Invitation to exclusive networking events',
+                                            'Access to MIHAS Virtual platform for year-round visibility',
+                                            'Eligibility for MIHAS Awards recognition'
+                                        ].map((item, i) => (
+                                            <li key={i} className="flex items-start gap-3">
+                                                <CheckCircle2 size={18} className="text-orange-500 shrink-0 mt-0.5" />
+                                                <span className="text-slate-300 font-medium text-sm">{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </Card>
+                        </div>
+
+                        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={{ visible: { transition: { staggerChildren: 0.1 } } }} className="grid md:grid-cols-3 gap-8">
+                            {[
+                                { title: 'OIC Market Access', desc: 'Tap into 57 OIC member nations representing over 1.8 billion consumers and a rapidly growing halal economy worth $2.3 trillion.', icon: Globe },
+                                { title: 'Brand Amplification', desc: 'Leverage MIHAS\'s global media reach across 200+ international publications and digital channels for maximum brand exposure.', icon: Megaphone },
+                                { title: 'Industry Recognition', desc: 'Showcase your innovations at the MIHAS Awards ceremony, earning credibility and trust from global halal industry stakeholders.', icon: Award }
+                            ].map((item, i) => (
+                                <motion.div key={i} variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}>
+                                    <Card className="p-8 hover:shadow-xl transition-all border-slate-100 group h-full">
+                                        <div className="w-12 h-12 bg-orange-100 text-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-600 group-hover:text-white transition-colors">
+                                            <item.icon size={24} />
+                                        </div>
+                                        <h4 className="font-h4 text-slate-900 mb-3 italic uppercase">{item.title}</h4>
+                                        <p className="font-body-sm text-slate-500">{item.desc}</p>
+                                    </Card>
+                                </motion.div>
+                            ))}
+                        </motion.div>
+
+                        <div className="bg-orange-600 text-white rounded-[40px] p-12 text-center relative overflow-hidden">
+                            <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-700 opacity-50"></div>
+                            <div className="relative z-10">
+                                <h3 className="font-h2 mb-4 italic uppercase text-white">Ready to Exhibit?</h3>
+                                <p className="font-body text-orange-100 mb-8 max-w-xl mx-auto">Secure your spot and unlock the full suite of exhibitor incentives. Early bookings receive priority placement.</p>
+                                <Button className="bg-white text-slate-900 hover:bg-slate-900 hover:text-white" onClick={() => onOpenForm('exhibitor')}>
+                                    Book My Space <ArrowRight size={18} className="ml-2" />
+                                </Button>
                             </div>
                         </div>
                     </div>
