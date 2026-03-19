@@ -73,7 +73,7 @@ const Footer = ({ navigate }) => {
                 </div>
 
                 <div className="max-w-7xl mx-auto mt-20 pt-10 border-t border-slate-800 text-sm flex flex-col md:flex-row justify-between items-center gap-8">
-                    <p className="text-slate-600">© 2025 MIHAS Malaysia. All rights reserved.</p>
+                    <p className="text-slate-600">© 2026 MIHAS Malaysia. All rights reserved.</p>
                     <div className="flex gap-10 text-slate-500">
                         <span className="hover:text-white cursor-pointer transition-colors">Terms of Service</span>
                         <span className="hover:text-white cursor-pointer transition-colors">Privacy Policy</span>
