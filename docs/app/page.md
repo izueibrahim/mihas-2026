@@ -1,20 +1,21 @@
-# App Root (page.jsx)
+# App Root (`page.jsx`)
 
 ## Overview
-The `page.jsx` file is the central entry point and main layout container for the MIHAS 2026 client-side React application. It handles the dynamic rendering of all major views (Home, About, Exhibitor, Visitor, Programme, etc.) based on the current navigation state.
+The central entry point for the MIHAS 2026 client-side React application. Handles dynamic view rendering, URL hash persistence, and global state management.
 
 ## Core Responsibilities
-- **State Management**: Maintains the active `currentView` (e.g., 'home', 'about') and `subView` (for tabbed navigation within views). Also manages global states like `isMenuOpen`, `isFormOpen`, and `formType`.
-- **View Routing**: Acts as an internal router, conditionally rendering the appropriate View component depending on the state. It handles smooth view transitions and sub-view deep linking.
-- **Form Modal Integration**: Manages the display of the `MultiStepForm`, allowing users to open registration/contact forms globally from any view.
-- **Wrapper Construction**: Wraps all deeply rendered content dynamically between the `Header` and `Footer` components.
+- **State Management**: Maintains `currentView`, `subView`, `isMobileMenuOpen`, `scrolled`, and `formOpen` states.
+- **URL Hash Persistence**: Synchronizes `currentView` and `subView` with the URL hash (e.g., `/#directory`, `/#about/history`). Users stay on the same page after refresh or browser back/forward.
+- **View Routing**: Conditionally renders the appropriate View component with `AnimatePresence` page transitions (fade + slide).
+- **Form Modal Integration**: Manages `MultiStepForm` display for registration/contact flows.
 
 ## Sub-Components Rendered
-- `Header`
+- `Header` (sticky navigation)
 - `HomeView`, `AboutView`, `VisitorView`, `ExhibitorView`, `ProgrammeView`, `MediaView`, `DirectoryView`, `ContactView`, `AwardsView`, `InspView`
 - `Footer`
-- `MultiStepForm`
+- `MultiStepForm` (modal overlay)
+- Sticky bottom actions: Sponsor + Book Space floating buttons
 
 ## Key Functions
-- `navigate(view, sub)`: Updates the current view and resets or changes the sub-view selection. It also resets scroll position to top.
-- `handleOpenForm(type)`: Triggers the multi-step form overlay to open for a specific user journey (e.g., 'visitor', 'exhibitor').
+- `navigate(viewId, subId)`: Updates the URL hash, which triggers a `hashchange` listener that syncs the view state. Closes mobile menu and scrolls to top.
+- `handleOpenForm(type)`: Opens the multi-step form for a specific user journey ('visitor', 'exhibitor', 'media', 'sponsor').

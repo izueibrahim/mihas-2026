@@ -1,8 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, MessageCircle, Instagram, Facebook, Twitter, Linkedin, Youtube, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageCircle, Instagram, Facebook, Twitter, Linkedin, Youtube, ArrowRight, Mic } from 'lucide-react';
 import PageHeader from '../UI/PageHeader';
 import Card from '../UI/Card';
 import Button from '../UI/Button';
@@ -10,7 +10,10 @@ import SubNav from '../UI/SubNav';
 import { contactTabs } from '../../data/navigation';
 import { matradeNetwork } from '../../data/partners';
 
-const ContactView = ({ subView, setSubView, onOpenForm }) => (
+const ContactView = ({ subView, setSubView, onOpenForm }) => {
+    const [activeNetworkRegion, setActiveNetworkRegion] = useState(0);
+
+    return (
     <div className="bg-slate-50 min-h-screen pb-20">
         <PageHeader title="Get In Touch" breadcrumb="Contact" subtitle="We're here to help you with your participation." />
         <SubNav items={contactTabs} activeItem={subView} onSelect={setSubView} />
@@ -98,43 +101,60 @@ const ContactView = ({ subView, setSubView, onOpenForm }) => (
             {subView === 'matrade-network' && (
                 <div className="space-y-12">
                     <div className="text-center max-w-2xl mx-auto mb-12">
-                        <h2 className="font-h2 text-slate-900 mb-4 italic uppercase">Global MATRADE Network</h2>
-                        <p className="font-body text-slate-500">Connecting Malaysian businesses with the world through our extensive network of international trade offices.</p>
+                        <h2 className="text-3xl font-bold text-slate-900 mb-4">MATRADE Global Network</h2>
+                        <p className="text-slate-600">The Malaysia External Trade Development Corporation (MATRADE) develops and promotes Malaysia's exports across the globe and is represented in 46 locations worldwide.</p>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {matradeNetwork.map((region, i) => (
-                            <Card key={i} className="p-8 hover:border-orange-500/30 transition-all group">
-                                <h3 className="font-h4 text-slate-900 mb-6 italic uppercase flex items-center justify-between">
+                    <div className="flex flex-col lg:flex-row gap-8 items-start">
+                        {/* Sidebar for Regions */}
+                        <div className="lg:w-1/4 w-full flex overflow-x-auto lg:flex-col gap-2 pb-4 lg:pb-0 hide-scrollbar sticky top-[150px]">
+                            {matradeNetwork.map((region, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => setActiveNetworkRegion(i)}
+                                    className={`px-6 py-4 lg:p-4 text-center lg:text-left rounded-xl font-bold transition-all whitespace-nowrap lg:whitespace-normal ${activeNetworkRegion === i ? 'bg-slate-900 text-white shadow-md' : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'}`}
+                                >
                                     {region.region}
-                                    <div className="w-12 h-[1px] bg-slate-200 group-hover:bg-orange-500/30 transition-all"></div>
-                                </h3>
-                                <ul className="grid grid-cols-2 gap-y-3 gap-x-4">
-                                    {region.offices.map((office, j) => (
-                                        <li key={j} className="font-body-sm text-slate-600 flex items-center gap-2">
-                                            <div className="w-1 h-1 rounded-full bg-orange-500/40"></div>
-                                            {office}
-                                        </li>
-                                    ))}
-                                </ul>
-                            </Card>
-                        ))}
+                                </button>
+                            ))}
+                        </div>
+
+                        {/* Content Grid for Offices in Active Region */}
+                        <div className="lg:w-3/4 w-full grid md:grid-cols-2 gap-6 animate-in fade-in">
+                            {matradeNetwork[activeNetworkRegion].offices.map((office, j) => (
+                                <Card key={j} className="p-6 border-t-4 border-t-orange-500 flex flex-col">
+                                    <h4 className="text-xl font-bold text-slate-900 mb-4">{office.city}</h4>
+                                    <div className="space-y-4 flex-1">
+                                        <div className="flex gap-3 items-start">
+                                            <MapPin className="text-slate-400 shrink-0 mt-0.5" size={16} />
+                                            <span className="text-sm text-slate-600 leading-relaxed">{office.address}</span>
+                                        </div>
+                                        <div className="flex gap-3 items-start">
+                                            <Phone className="text-slate-400 shrink-0 mt-0.5" size={16} />
+                                            <span className="text-sm text-slate-600">{office.tel}</span>
+                                        </div>
+                                        <div className="flex gap-3 items-start">
+                                            <Mic className="text-slate-400 shrink-0 mt-0.5" size={16} />
+                                            <span className="text-sm text-orange-600 font-medium break-all">{office.email}</span>
+                                        </div>
+                                    </div>
+                                </Card>
+                            ))}
+                        </div>
                     </div>
 
-                    <Card className="p-10 bg-slate-900 text-white rounded-[40px] shadow-2xl relative overflow-hidden text-center mt-12">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-orange-600/10 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
-                        <h3 className="font-h3 mb-4">Interested in Malaysian Products?</h3>
-                        <p className="text-slate-400 font-body mb-8 max-w-xl mx-auto">Contact our nearest trade office to discover verified Malaysian suppliers and international trade opportunities.</p>
-                        <div className="flex justify-center">
-                            <Button>Find Nearest Office</Button>
-                        </div>
-                    </Card>
+                    <div className="mt-12 p-8 bg-slate-900 text-white rounded-3xl text-center">
+                        <h3 className="text-2xl font-bold mb-4">Need to contact a specific MATRADE office?</h3>
+                        <p className="text-slate-300 mb-6">For complete addresses, trade commissioners' contact details, and emails of all overseas offices, please visit the MATRADE Portal.</p>
+                        <Button className="mx-auto" onClick={() => window.open('https://www.matrade.gov.my', '_blank')}>Visit MATRADE Portal</Button>
+                    </div>
                 </div>
             )}
                 </motion.div>
             </AnimatePresence>
         </div>
     </div>
-);
+  );
+};
 
 export default ContactView;

@@ -1,21 +1,27 @@
 # Button Component
 
 ## Overview
-`Button.jsx` is a highly reusable, generalized button wrapper used universally across the application to enforce design consistency. It maps tightly to the custom styling defined in `globals.css` (via `.font-button`).
+`Button.jsx` is the universal button wrapper enforcing design consistency across all views. It uses `clsx` and `tailwind-merge` for class composition.
+
+## Base Style
+All buttons inherit: `px-8 py-4 rounded-xl font-button text-sm transition-all inline-flex items-center justify-center gap-2`
 
 ## Usage
 ```jsx
-<Button variant="outline" size="lg" onClick={handleClick}>
+<Button variant="outline" onClick={handleClick}>
   Click Me
 </Button>
 ```
 
 ## Props
 - `children` (Node): The content of the button.
-- `variant` (String, Optional): Controls the background/border styling. Default is `'primary'` (Solid Orange). Other option includes `'outline'` (transparent background with border), `'ghost'` (transparent background with text).
-- `size` (String, Optional): Controls padding and dimensions. Options: `'sm'`, `'md'` (default), `'lg'`.
-- `className` (String, Optional): An injection point for overriding or extending default Tailwind utility classes dynamically.
+- `variant` (String, Optional): Controls styling. Options:
+  - `'primary'` (default) — Solid orange (`bg-orange-600`)
+  - `'secondary'` — Solid dark (`bg-slate-900`)
+  - `'outline'` — Bordered with white background
+  - `'ghost'` — Transparent with hover highlight
+- `className` (String, Optional): Extend or override default Tailwind classes.
 - `...props`: Any standard HTML `<button>` attributes (e.g., `disabled`, `type`, `onClick`).
 
-## Behavior
-Includes built-in hover effects, scaling transforms, and focus visible states for accessibility.
+## Design Note
+All ad-hoc padding/font overrides have been removed from individual views. Buttons should rely on the base style for consistent sizing across desktop and mobile.

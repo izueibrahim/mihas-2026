@@ -1,16 +1,18 @@
 # Footer Component
 
 ## Overview
-`Footer.jsx` serves as the global website footer, appearing at the bottom of every layout. It contains comprehensive organizational details, quick links, newsletter subscriptions, social links, and legal information.
+`Footer.jsx` is the global site footer appearing below every view. All typography is unified to `text-sm` for consistency.
 
 ## Sections
-- **Brand & Mission**: Shows the MIHAS logo and a brief summary of its mission.
-- **Newsletter Subscription**: Provides an email input and submission button for users to stay updated (MIHAS Insights).
-- **Quick Links**: Navigation links formatted into columns (Exhibition, Media, Legal) facilitating rapid bottom-up navigation.
-- **Social Connect**: Links to Facebook, Twitter, Instagram, and LinkedIn.
-- **Contact Details**: Provides direct physical addresses, phone numbers, and emails.
-- **Organisers Section**: Distinctly lists host, organiser, and association logos or text.
-- **Copyright & Legal**: Final section with standard footer boilerplate.
+- **Brand & Mission**: MIHAS logo (inverted) with a brief italic description.
+- **Quick Navigation**: Links styled with `font-nav` to match the header menu font. Includes hover arrow animation.
+- **Contact Info**: Address, email (`enquiry@mihas.com.my`), and phone (`+603 6211 9973`) with orange icon accents.
+- **Stay Informed**: Newsletter email input with rounded dark background and orange submit arrow.
+- **Social Connect**: Icon row (Facebook, Twitter, Instagram, LinkedIn, YouTube) with hover-to-orange transitions.
+- **Copyright & Legal**: `© 2026 MIHAS Malaysia. All rights reserved.` with Terms, Privacy, and Cookies links.
 
 ## Props
-- `navigate` (Function): Global navigation handler enabling quick-link routing without page reloading.
+- `navigate` (Function): Global navigation handler enabling quick-link routing.
+
+## Dependencies
+- Renders `GlobalOrganisersBar` above the footer content.

@@ -1,12 +1,15 @@
 # Exhibitor Data (`exhibitor.js`)
 
 ## Overview
-The central repository for information persuading and managing B2B exhibition clients.
+Central data repository for the Exhibitor section of MIHAS 2026.
 
 ## Exports
-- `boothTypes`: Array strictly comparing "Standard Shell Scheme" (9sqm) vs "Bare Space". Details inclusions like fascia boards, armlights, and carpets.
-- `clusterData`: A massive array visually distinguishing industry sectors (e.g., "Food & Beverage", "Modest Fashion", "Islamic Finance"). Each cluster includes a specific `color` property mapping to Tailwind presets.
-- `whyExhibitData`: Statistics mapped to convince businesses of ROI (e.g., "Access 85+ buyer countries").
+- `exhibitorTabs`: Tab definitions for the Exhibitor sub-navigation. Includes:
+  - `why-exhibit` — Why Exhibit
+  - `who-should-exhibit` — Who Should Exhibit
+  - `incentives` — Exhibitor Incentives
+- `whyExhibitData`: Array of 6 reasons to exhibit, each with a `title` and `desc` (e.g., "The World's Most Comprehensive Halal Showcase", "Located in the World's #1 Halal Economy").
+- `exhibitorCategories`: Array of 14 industry sectors with detailed `items` lists. Sectors include Food & Beverages, Pharmaceuticals, Islamic Finance, Cosmetics, Education, E-Commerce, and more.
 
 ## Component Integration
-Consumed exclusively by `ExhibitorView.jsx` to build out the technical requirement tabs and visual clusters.
+Consumed by `ExhibitorView.jsx` to build the tabbed sub-views and sector grids.

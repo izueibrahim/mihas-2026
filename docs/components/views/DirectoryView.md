@@ -1,10 +1,16 @@
 # DirectoryView Component
 
 ## Overview
-`DirectoryView.jsx` simulates an advanced search registry filtering through mock exhibitor and partner arrays.
+`DirectoryView.jsx` provides a full-page PDF viewer for the MIHAS e-Directory document, allowing users to browse, view fullscreen, and download.
 
 ## Features
-- **Client-Side Search**: Users can explicitly type search terms. A `useEffect` hook triggers a real-time reactive filtering system over `searchQuery`.
-- **Category Refinement**: Allows cross-filtering by specific categorical buttons ('Food & Beverage', 'Cosmetics', etc.) managed via matching string states directly against `directoryData[].category`.
-- **Zero-State Validation**: Contains empty-state rendering checks "No results found matching your criteria" if filters become too strict.
-- **Grid Rendering**: Produces dynamic responsive grids mapping out returned objects into detailed location/booth cards.
+- **PDF Viewer**: Embeds `src/directory.pdf` via an `iframe` in a scrollable container that fills the available viewport height.
+- **Fullscreen**: Opens the PDF in a new browser tab via `window.open()`.
+- **Download**: Triggers a direct file download of `MIHAS_Directory.pdf` using a dynamically created anchor element.
+- **Exhibitor CTA**: Bottom section with "Are you an Exhibitor?" prompt and standardized buttons for "Book My Space" (orange) and "Login" (outline).
+
+## Props
+- `onOpenForm` (Function): Opens the multi-step exhibitor registration form.
+
+## Design Note
+The PDF viewer uses `w-full` and `h-[70vh] md:h-[80vh]` for responsive sizing with a clean `rounded-2xl` border.

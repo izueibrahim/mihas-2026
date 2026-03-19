@@ -1,13 +1,21 @@
 # ExhibitorView Component
 
 ## Overview
-`ExhibitorView.jsx` handles global access to B2B exhibition resources. This view is tailored to heavy data-payloads regarding cluster layout, booth specifications, and booking validation.
+`ExhibitorView.jsx` renders the Exhibitor section with tabbed sub-views for companies interested in showcasing at MIHAS 2026.
 
 ## Sub-Views
-- **why-exhibit**: Renders data-driven performance metrics for businesses and high-level advantages.
-- **clusters**: Maps through the massive `clusterData`, rendering visual sector-cards with tailored color thematics representing various industries (Food, Cosmetics, Fashion, Finance).
-- **booth-specs**: Uses CSS grids to compare Standard shell schemes and Bare space implementations with visual checklists.
-- **book-space**: Triggers the `onOpenForm` specifically targeted to `exhibitor` state to open the application modal.
+- **why-exhibit**: Performance metrics (80+ Countries, 4,000+ Meetings, RM4.3B Sales), reasons grid, and Book Space / MIHAS Hybrid CTAs.
+- **who-should-exhibit**: Exhibitor profile grid mapping through `exhibitorCategories` (14 sectors: Food & Beverages, Pharmaceuticals, Islamic Finance, etc.). Includes a dark CTA block for custom enquiries.
+- **incentives**: Premium incentives page featuring:
+  - OIC market access description and "Apply Now" CTA
+  - Key Benefits checklist (7 items) in a dark card
+  - 3 animated benefit cards (OIC Market Access, Brand Amplification, Industry Recognition)
+  - Orange "Ready to Exhibit?" CTA block
 
-## Design Highlights
-Implements significant use of `bg-orange-50` highlighted cards and border variants to distinguish "Premium" B2B interactions apart from standard layout interactions.
+## Props
+- `subView` (String): Active tab state.
+- `setSubView` (Function): Tab navigation handler.
+- `onOpenForm` (Function): Opens the multi-step exhibitor registration form.
+
+## Data Dependencies
+- `exhibitorTabs`, `whyExhibitData`, `exhibitorCategories` from `data/exhibitor.js`
