@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { sponsorsData } from '../../data/sponsors';
 
+import Image from 'next/image';
+
 const SponsorShowcase = () => {
     const [activeTab, setActiveTab] = useState('premium');
 
@@ -17,9 +19,19 @@ const SponsorShowcase = () => {
                     <div key={idx} className="mb-10">
                         <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest text-center mb-6">{group.tier}</h4>
                         <div className="flex flex-wrap justify-center gap-4">
-                            {group.names.map((name, i) => (
-                                <div key={i} className="bg-white border border-slate-200 h-24 px-8 min-w-[180px] rounded-2xl flex items-center justify-center text-center font-bold text-slate-500 hover:text-orange-600 hover:border-orange-300 hover:shadow-md transition-all cursor-default">
-                                    {name}
+                            {group.items.map((item, i) => (
+                                <div key={i} className="bg-white border border-slate-200 h-24 px-8 min-w-[200px] rounded-2xl flex items-center justify-center text-center font-bold text-slate-500 hover:text-orange-600 hover:border-orange-300 hover:shadow-md transition-all cursor-default overflow-hidden p-4">
+                                    {item.logo ? (
+                                        <Image 
+                                            src={item.logo} 
+                                            alt={item.name} 
+                                            width={140} 
+                                            height={60} 
+                                            className="max-h-16 w-auto object-contain transition-transform hover:scale-105"
+                                        />
+                                    ) : (
+                                        <span>{item.name}</span>
+                                    )}
                                 </div>
                             ))}
                         </div>
