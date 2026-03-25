@@ -5,7 +5,7 @@ export const blogs = [
     title: "The Future of Global Halal Trade: Trends for 2026",
     excerpt: "Discover how digitalization and sustainability are reshaping the billions-dollar halal market.",
     author: "MIHAS Editorial",
-    image: "/src/blog-1.jpg"
+    image: "/images/photo-gallery/4.jpg"
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const blogs = [
     title: "Navigating the Halal Certification Process",
     excerpt: "A comprehensive guide for international exporters looking to enter the Malaysian market.",
     author: "Trade Expert",
-    image: "/src/blog-2.jpg"
+    image: "/images/photo-gallery/5.jpg"
   },
   {
     id: 3,
@@ -21,6 +21,6 @@ export const blogs = [
     title: "Modest Fashion: More Than Just a Trend",
     excerpt: "How the MIHAS Modest Fashion cluster is becoming a global benchmark for style and ethics.",
     author: "Fashion Lead",
-    image: "/src/blog-3.jpg"
+    image: "/images/photo-gallery/6.jpg"
   }
 ];

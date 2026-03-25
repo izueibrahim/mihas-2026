@@ -202,6 +202,7 @@ const HomeView = ({ navigate, onOpenForm }) => (
               <motion.div key={blog.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15, duration: 0.6 }} className="h-full">
                 <Card className="bg-slate-800 border-none text-white overflow-hidden group cursor-pointer hover:-translate-y-2 transition-all duration-500 flex flex-col h-full rounded-[32px] shadow-2xl shadow-black/20">
                   <div className="h-48 bg-slate-700 relative overflow-hidden">
+                    <img src={blog.image} alt={blog.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-orange-600/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   </div>
                   <div className="p-8 flex flex-col flex-grow">

@@ -26,7 +26,7 @@ export const galleryImages = [
 ];
 
 export const galleryVideos = [
-  { id: 1, title: "MIHAS 2024 Highlights", thumbnail: "/src/vid-1.jpg", duration: "3:45" },
-  { id: 2, title: "Exhibitor Testimonials", thumbnail: "/src/vid-2.jpg", duration: "2:15" },
-  { id: 3, title: "Halal Ecosystem Overview", thumbnail: "/src/vid-3.jpg", duration: "5:00" }
+  { id: 1, title: "MIHAS 2024 Highlights", thumbnail: "/images/photo-gallery/1.jpg", duration: "3:45" },
+  { id: 2, title: "Exhibitor Testimonials", thumbnail: "/images/photo-gallery/2.jpg", duration: "2:15" },
+  { id: 3, title: "Halal Ecosystem Overview", thumbnail: "/images/photo-gallery/3.jpg", duration: "5:00" }
 ];

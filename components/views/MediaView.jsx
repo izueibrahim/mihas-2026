@@ -98,7 +98,8 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                                     {newsData.map((news, i) => (
                                         <Card key={i} className="group cursor-pointer border-slate-200 overflow-hidden flex flex-col hover:shadow-xl transition-all hover:-translate-y-1 duration-300">
-                                            <div className="h-56 bg-slate-100 relative overflow-hidden">
+                                            <div className="h-56 bg-slate-200 relative overflow-hidden flex items-center justify-center">
+                                                <Newspaper className="text-slate-400 opacity-20" size={80} />
                                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
                                                 <div className="absolute top-4 left-4 bg-orange-600 text-white font-label px-3 py-1.5 rounded-full shadow-lg">New</div>
                                             </div>
@@ -128,6 +129,7 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                                     {blogs.map((blog) => (
                                         <Card key={blog.id} className="group cursor-pointer border-slate-200 overflow-hidden flex flex-col md:flex-row h-full hover:shadow-2xl transition-all duration-500">
                                             <div className="md:w-2/5 h-64 md:h-auto bg-slate-100 shrink-0 relative overflow-hidden">
+                                                <img src={blog.image} alt={blog.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                                                 <div className="absolute inset-0 bg-orange-600/10 group-hover:bg-transparent transition-colors"></div>
                                             </div>
                                             <div className="p-8 flex flex-col flex-grow">
@@ -164,6 +166,7 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 animate-in fade-in duration-700">
                                         {galleryImages.map((img) => (
                                             <div key={img.id} className="aspect-[4/5] bg-slate-100 rounded-[32px] group relative overflow-hidden cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                                                <img src={img.src} alt={img.alt} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/80 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                                 <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center opacity-0 group-hover:opacity-100 transition-all translate-y-4 group-hover:translate-y-0">
                                                     <p className="text-white font-label mb-4 italic">{img.alt}</p>
@@ -176,8 +179,9 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-in fade-in duration-700">
                                         {galleryVideos.map((vid) => (
                                             <Card key={vid.id} className="group cursor-pointer overflow-hidden border-slate-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 pb-4">
-                                                <div className="h-60 bg-slate-900 relative flex items-center justify-center">
-                                                    <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center text-white group-hover:scale-110 group-hover:bg-orange-600 group-hover:border-orange-500 transition-all duration-500">
+                                                <div className="h-60 bg-slate-900 relative flex items-center justify-center overflow-hidden">
+                                                    <img src={vid.thumbnail} alt={vid.title} className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-700" />
+                                                    <div className="relative z-10 w-16 h-16 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center text-white group-hover:scale-110 group-hover:bg-orange-600 group-hover:border-orange-500 transition-all duration-500">
                                                         <Video size={24} fill="currentColor" />
                                                     </div>
                                                     <div className="absolute bottom-4 right-4 bg-black/60 text-white font-label px-3 py-1.5 rounded-full backdrop-blur-md italic">{vid.duration}</div>
