@@ -3,14 +3,14 @@ import Image from 'next/image';
 
 const GlobalOrganisersBar = () => {
     const organisers = [
-        { label: "Hosted by", logo: "/images/organisers/miti.jpeg", width: 120, height: 60 },
-        { label: "Organised by", logo: "/images/organisers/matrade.png", width: 168, height: 48 },
-        { 
-            label: "In Association with", 
+        { label: "Hosted by", logo: "/images/organisers/miti.png", width: 120, height: 60 },
+        { label: "Organised by", logo: "/images/organisers/matrade.png", width: 175, height: 50 },
+        {
+            label: "In Association with",
             logos: [
-                { src: "/images/organisers/hdc.png", width: 72, height: 48 },
-                { src: "/images/organisers/jakim.png", width: 72, height: 48 }
-            ] 
+                { src: "/images/organisers/hdc.png", width: 100, height: 50 },
+                { src: "/images/organisers/jakim.png", width: 100, height: 50 }
+            ]
         },
         { label: "Managed by", logo: "/images/organisers/es.png", width: 96, height: 48 },
         { label: "Winner of", logo: "/images/organisers/wtpo-award.png", width: 144, height: 48 }
@@ -21,7 +21,7 @@ const GlobalOrganisersBar = () => {
         { name: "Malaysia Madani", logo: "/images/organisers/malaysia-madani.png" },
         { name: "Malaysian Convention", logo: "/images/organisers/malaysian-convention.jpeg" },
         { name: "Visit Malaysia 2026", logo: "/images/organisers/visit-malaysia-2026.jpeg" },
-        { name: "Meet in Malaysia", logo: "/images/organisers/meet-in-malaysia.jpeg" },
+        { name: "Meet in Malaysia", logo: "/images/organisers/meet-in-malaysia.png" },
         { name: "FAMA", logo: "/images/organisers/fama.jpeg" },
         { name: "Islamic Tourism Centre", logo: "/images/organisers/islamic-tourism.png" },
         { name: "PDRM", logo: "/images/organisers/pdrm-police.jpeg" },
@@ -63,7 +63,7 @@ const GlobalOrganisersBar = () => {
                             ))}
                         </div>
                     </div>
-                    
+
                     <div className="flex flex-col items-center">
                         <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4">In Support of</div>
                         <Image src="/images/organisers/islamic-tourism-month-2025.png" alt="In Support of" width={144} height={60} className="h-12 w-auto object-contain" />

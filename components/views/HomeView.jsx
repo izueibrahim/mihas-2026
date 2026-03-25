@@ -22,7 +22,7 @@ const HomeView = ({ navigate, onOpenForm }) => (
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: 'easeOut' }} className="inline-flex items-center gap-3 px-6 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mb-8">
             <div className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></div>
-            <span className="font-label text-white">16 - 19 September 2025 • MITEC, Kuala Lumpur</span>
+            <span className="font-label text-white">23 - 26 September 2026 • MITEC, Kuala Lumpur</span>
           </motion.div>
 
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }} className="font-h1 text-white mb-8">
