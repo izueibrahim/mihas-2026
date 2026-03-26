@@ -5,7 +5,7 @@ export const blogs = [
     title: "The Future of Global Halal Trade: Trends for 2026",
     excerpt: "Discover how digitalization and sustainability are reshaping the billions-dollar halal market.",
     author: "MIHAS Editorial",
-    image: "/images/photo-gallery/4.jpg"
+    image: "/images/photos-gallery/4.jpg"
   },
   {
     id: 2,

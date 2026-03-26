@@ -59,13 +59,13 @@ const HomeView = ({ navigate, onOpenForm }) => (
             transition={{ duration: 1, delay: 0.4, ease: 'easeOut' }}
             className="text-center mb-12 max-w-4xl mx-auto flex flex-col items-center"
           >
-            {/* ROW 1: Made bigger so it matches better */}
-            <span className="block text-3xl md:text-4xl text-white/90 font-medium mb-2">
+            {/* ROW 1: Smaller */}
+            <span className="block text-2xl md:text-3xl text-white/90 font-medium mb-1">
               Join the World's
             </span>
 
-            {/* ROW 2: Brought the size down slightly so it doesn't overpower Row 1 */}
-            <span className="block text-4xl md:text-5xl font-bold text-white tracking-wide">
+            {/* ROW 2: BIGGER */}
+            <span className="block text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-wide">
               Biggest <span className="text-orange-500">Halal</span> Showcase
             </span>
           </motion.div>
@@ -120,43 +120,80 @@ const HomeView = ({ navigate, onOpenForm }) => (
     <section className="w-full">
       <div className="grid md:grid-cols-3 h-auto md:h-[450px]">
         {/* CTA 1 */}
-        <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-slate-900 text-white p-10 lg:p-20 flex flex-col justify-center relative overflow-hidden group">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full translate-x-1/2 -translate-y-1/2 group-hover:scale-110 transition-transform duration-700"></div>
-          <div className="relative z-10 space-y-8">
-            <h3 className="font-h2 italic uppercase leading-none">Exhibitor<br />Incentives</h3>
-            <p className="text-slate-400 font-medium uppercase tracking-tight italic">Unlock unparalleled access to OIC markets and beyond.</p>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative overflow-hidden group flex flex-col justify-center min-h-[450px] p-10 lg:p-20"
+        >
+          <img
+            src="/images/photos-gallery/why-should-you-exhibit-mihas.jpg"
+            alt="Exhibitor Incentives"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-slate-900/70 z-10 group-hover:bg-slate-900/50 transition-colors duration-500"></div>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full translate-x-1/2 -translate-y-1/2 group-hover:scale-110 transition-transform duration-700 z-10"></div>
+          <div className="relative z-20 space-y-8 text-center">
+            <h3 className="font-h2 italic uppercase leading-none text-white">Exhibitor<br />Incentives</h3>
+            <p className="text-white/80 font-medium uppercase tracking-tight italic">Unlock unparalleled access to OIC markets and beyond.</p>
             <Button
-              className="bg-white text-slate-900 hover:bg-orange-600 hover:text-white"
+              className="bg-white text-slate-900 hover:bg-orange-600 hover:text-white mx-auto"
               onClick={() => navigate('exhibitor', 'incentives')}
             >
               View Benefits
             </Button>
           </div>
         </motion.div>
+
         {/* CTA 2 */}
-        <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.1 }} className="bg-orange-600 text-white p-10 lg:p-20 flex flex-col justify-center relative overflow-hidden group">
-          <div className="absolute inset-0 bg-slate-950/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          <div className="relative z-10 space-y-8 text-center sm:text-left">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="relative overflow-hidden group flex flex-col justify-center min-h-[450px] p-10 lg:p-20"
+        >
+          <img
+            src="/images/photos-gallery/registration-for-exhibitors-open.jpg"
+            alt="Registration is Open"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-orange-600/80 z-10 group-hover:bg-orange-600/70 transition-colors duration-500"></div>
+          <div className="relative z-20 space-y-8 text-center">
             <h3 className="font-h2 italic uppercase leading-none text-slate-900">Registration<br />is Open</h3>
             <p className="text-orange-100 font-body italic">Secure your space before early bird passes expire.</p>
             <Button
-              className="bg-slate-900 text-white hover:bg-white hover:text-slate-900 shadow-2xl shadow-orange-950/20"
+              className="bg-slate-900 text-white hover:bg-white hover:text-slate-900 shadow-2xl shadow-orange-950/20 mx-auto"
               onClick={() => onOpenForm('exhibitor')}
             >
               Reserve Space Now
             </Button>
           </div>
         </motion.div>
+
         {/* CTA 3 */}
-        <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay: 0.2 }} className="bg-slate-50 text-slate-900 p-10 lg:p-20 flex flex-col justify-center relative overflow-hidden group">
-          <div className="absolute bottom-0 right-0 w-64 h-64 bg-orange-600/5 rounded-full translate-x-1/2 translate-y-1/2 group-hover:scale-110 transition-transform duration-700"></div>
-          <div className="relative z-10 space-y-8">
-            <h3 className="font-h2 italic uppercase leading-none underline decoration-orange-500/20 underline-offset-8">At a <br />Glance</h3>
-            <div className="flex items-center gap-6">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="relative overflow-hidden group flex flex-col justify-center min-h-[450px] p-10 lg:p-20"
+        >
+          <img
+            src="/images/photos-gallery/the-world-largest-halal-event-glance.jpg"
+            alt="At a Glance"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-slate-50/90 z-10 group-hover:bg-slate-50/80 transition-colors duration-500"></div>
+          <div className="absolute bottom-0 right-0 w-64 h-64 bg-orange-600/5 rounded-full translate-x-1/2 translate-y-1/2 group-hover:scale-110 transition-transform duration-700 z-10"></div>
+          <div className="relative z-20 space-y-8 text-center">
+            <h3 className="font-h2 italic uppercase leading-none text-slate-900 underline decoration-orange-500/20 underline-offset-8">At a <br />Glance</h3>
+            <div className="flex items-center justify-center gap-6">
               <button className="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full bg-slate-900 text-white flex items-center justify-center hover:scale-110 shadow-2xl transition-all group-hover:bg-orange-600">
                 <Play className="ml-1" size={28} />
               </button>
-              <span className="font-ui italic text-slate-400">Watch <br />Showcase Film</span>
+              <span className="font-ui italic text-slate-400 text-left">Watch <br />Showcase Film</span>
             </div>
           </div>
         </motion.div>
@@ -192,6 +229,7 @@ const HomeView = ({ navigate, onOpenForm }) => (
             </div>
             <Card className="bg-slate-800 border-slate-700 text-white p-0 overflow-hidden ring-1 ring-white/5 shadow-2xl hover:shadow-orange-900/10 transition-all">
               <div className="h-48 md:h-64 bg-slate-700 relative group overflow-hidden">
+                <img src="/images/photos-gallery/global-excellence.jpg" alt="Global Excellence" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <Award size={120} className="text-slate-600 absolute bottom-4 right-4 opacity-20 group-hover:scale-110 transition-transform" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
                 <div className="absolute bottom-6 left-6 md:left-8">
