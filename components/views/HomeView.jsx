@@ -15,8 +15,17 @@ const HomeView = ({ navigate, onOpenForm }) => (
   <div className="bg-white">
     {/* Full Size Hero Section */}
     <section className="relative min-h-[85vh] md:min-h-screen w-full flex flex-col justify-center pt-[72px] md:pt-[88px] pb-16 bg-slate-900 overflow-hidden">
-      {/* Background styling for Hero (since images are removed) */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 opacity-80"></div>
+      {/* Hero Background Images */}
+      <picture className="absolute inset-0">
+        <source media="(max-width: 768px)" srcSet="/images/hero/hero-mobile.png" />
+        <img
+          src="/images/hero/hero-desktop.png"
+          alt="MIHAS 2026 Global Halal Economy"
+          className="w-full h-full object-cover"
+        />
+      </picture>
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-slate-900/60 transition-opacity duration-700"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full flex-grow flex flex-col justify-center">
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
@@ -25,13 +34,41 @@ const HomeView = ({ navigate, onOpenForm }) => (
             <span className="font-label text-white">23 - 26 September 2026 • MITEC, Kuala Lumpur</span>
           </motion.div>
 
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }} className="font-h1 text-white mb-8">
-            Gateway to the Global <span className="text-orange-500">Halal Economy</span>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2, ease: 'easeOut' }}
+            className="font-h1 text-white mb-12 text-center flex flex-col items-center"
+          >
+            {/* ROW 1: Your "h1" (Logo + MIHAS) */}
+            <span className="flex items-center justify-center gap-3 md:gap-5">
+              {/* Change 'mihas-logo.png' to your actual file name! */}
+              <img src="images/mihas-logo/mihas-logo.png" alt="MIHAS Logo" className="h-16 md:h-20 w-auto object-contain" />
+              <span className="tracking-wider text-6xl md:text-7xl font-bold">MIHAS</span>
+            </span>
+
+            {/* ROW 2: Your "h2" (Subtitle) */}
+            <span className="block text-lg md:text-xl font-normal mt-2 tracking-wide text-white/90">
+              Malaysia International <span className="text-orange-500 font-medium">Halal</span> Showcase
+            </span>
           </motion.h1>
 
-          <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.4, ease: 'easeOut' }} className="font-body-lg text-white/80 mb-12 max-w-3xl mx-auto">
-            Join the world's largest Halal trade show and connect with thousands of industry leaders across the globe.
-          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4, ease: 'easeOut' }}
+            className="text-center mb-12 max-w-4xl mx-auto flex flex-col items-center"
+          >
+            {/* ROW 1: Made bigger so it matches better */}
+            <span className="block text-3xl md:text-4xl text-white/90 font-medium mb-2">
+              Join the World's
+            </span>
+
+            {/* ROW 2: Brought the size down slightly so it doesn't overpower Row 1 */}
+            <span className="block text-4xl md:text-5xl font-bold text-white tracking-wide">
+              Biggest <span className="text-orange-500">Halal</span> Showcase
+            </span>
+          </motion.div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.6, ease: 'easeOut' }} className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
             <Button
               className="w-full sm:w-auto bg-orange-600 hover:bg-orange-500 text-white shadow-2xl shadow-orange-950/20"
