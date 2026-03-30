@@ -11,6 +11,7 @@ import { mediaTabs } from '../../data/navigation';
 import { newsData } from '../../data/news';
 import { blogs } from '../../data/blogs';
 import { galleryImages, galleryVideos } from '../../data/gallery';
+import Link from 'next/link';
 
 const MediaView = ({ subView, setSubView, onOpenForm }) => {
     const [galleryType, setGalleryType] = useState('photos');
@@ -26,8 +27,8 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                         {subView === 'registration' && (
                             <div className="max-w-6xl mx-auto space-y-12">
                                 <div className="text-center max-w-2xl mx-auto">
-                                    <h2 className="font-h1 text-slate-900 mb-4 italic uppercase">Media Accreditation</h2>
-                                    <p className="font-body text-slate-600">Join over 200 global media outlets covering the world's premier Halal showcase. Register now for exclusive access.</p>
+                                    <h2 className="font-h1 text-black mb-4 italic uppercase">Media Accreditation</h2>
+                                    <p className="font-body text-black">Join over 200 global media outlets covering the world's premier Halal showcase. Register now for exclusive access.</p>
                                 </div>
                                 <div className="grid lg:grid-cols-5 gap-8">
                                     <div className="lg:col-span-2 space-y-6">
@@ -122,28 +123,28 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                         {subView === 'blog' && (
                             <div className="space-y-12">
                                 <div className="text-center max-w-2xl mx-auto mb-16">
-                                    <h2 className="font-h1 text-slate-900 mb-4 italic uppercase">MIHAS Insight</h2>
-                                    <p className="font-body text-slate-600">Thought leadership and deep dives into the global halal economy.</p>
+                                    <h2 className="font-h1 text-black mb-4 italic uppercase">MIHAS Insight</h2>
+                                    <p className="font-body text-black">Thought leadership and deep dives into the global halal economy.</p>
                                 </div>
                                 <div className="grid md:grid-cols-2 gap-10">
                                     {blogs.map((blog) => (
-                                        <Card key={blog.id} className="group cursor-pointer border-slate-200 overflow-hidden flex flex-col md:flex-row h-full hover:shadow-2xl transition-all duration-500">
+                                        <Link key={blog.id} href={`/blog/${blog.slug}`} className="group cursor-pointer border-slate-200 overflow-hidden flex flex-col md:flex-row h-full hover:shadow-2xl transition-all duration-500 bg-white rounded-3xl border">
                                             <div className="md:w-2/5 h-64 md:h-auto bg-slate-100 shrink-0 relative overflow-hidden">
                                                 <img src={blog.image} alt={blog.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                                                 <div className="absolute inset-0 bg-orange-600/10 group-hover:bg-transparent transition-colors"></div>
                                             </div>
                                             <div className="p-8 flex flex-col flex-grow">
-                                                <div className="text-slate-400 font-label mb-4 italic">{blog.date}</div>
-                                                <h3 className="font-h4 text-slate-900 mb-4 group-hover:text-orange-600 transition-colors italic uppercase">{blog.title}</h3>
-                                                <p className="font-body-sm text-slate-500 mb-8 line-clamp-3 italic">{blog.excerpt}</p>
+                                                <div className="text-black/50 font-label mb-4 italic">{blog.date}</div>
+                                                <h3 className="font-h4 text-black mb-4 group-hover:text-orange-600 transition-colors italic uppercase">{blog.title}</h3>
+                                                <p className="font-body-sm text-black/70 mb-8 line-clamp-3 italic">{blog.excerpt}</p>
                                                 <div className="mt-auto flex items-center justify-between pt-6 border-t border-slate-100">
-                                                    <span className="font-label text-slate-400 italic">{blog.author}</span>
+                                                    <span className="font-label text-black/50 italic">{blog.author}</span>
                                                     <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-all">
                                                         <ArrowRight size={18} />
                                                     </div>
                                                 </div>
                                             </div>
-                                        </Card>
+                                        </Link>
                                     ))}
                                 </div>
                             </div>
