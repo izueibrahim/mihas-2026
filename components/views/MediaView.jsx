@@ -97,24 +97,26 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                                     <Button variant="outline">Filter By Category</Button>
                                 </div>
                                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                    {newsData.map((news, i) => (
-                                        <Card key={i} className="group cursor-pointer border-slate-200 overflow-hidden flex flex-col hover:shadow-xl transition-all hover:-translate-y-1 duration-300">
+                                    {newsData.map((news) => (
+                                        <Link href={`/news/${news.slug}`} key={news.id} className="group cursor-pointer border-slate-200 overflow-hidden flex flex-col hover:shadow-xl transition-all hover:-translate-y-1 duration-300 bg-white rounded-[32px] border shadow-sm">
                                             <div className="h-56 bg-slate-200 relative overflow-hidden flex items-center justify-center">
-                                                <Newspaper className="text-slate-400 opacity-20" size={80} />
-                                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
-                                                <div className="absolute top-4 left-4 bg-orange-600 text-white font-label px-3 py-1.5 rounded-full shadow-lg">New</div>
+                                                <img src={news.image} alt={news.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+                                                <div className="absolute top-4 left-4 bg-orange-600 text-white font-label px-3 py-1.5 rounded-full shadow-lg">News</div>
                                             </div>
                                             <div className="p-8 flex-grow flex flex-col">
-                                                <div className="flex items-center gap-2 text-orange-600 font-label mb-4">
-                                                    <Clock size={12} /> {news.date}
+                                                <div className="flex items-center justify-between mb-4">
+                                                    <div className="flex items-center gap-2 text-orange-600 font-label">
+                                                        <Clock size={12} /> {news.date}
+                                                    </div>
                                                 </div>
                                                 <h3 className="font-h4 text-slate-900 mb-4 line-clamp-2 group-hover:text-orange-600 transition-colors uppercase italic">{news.title}</h3>
-                                                <p className="font-body-sm text-slate-500 mb-6 line-clamp-3">MATRADE continues to champion the global halal economy through strategic exhibitions and B2B matching...</p>
+                                                <p className="font-body-sm text-slate-500 mb-6 line-clamp-3">{news.excerpt}</p>
                                                 <div className="mt-auto flex items-center gap-2 font-label text-slate-400 group-hover:text-orange-600 transition-colors italic">
                                                     Read More <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                                                 </div>
                                             </div>
-                                        </Card>
+                                        </Link>
                                     ))}
                                 </div>
                             </div>
