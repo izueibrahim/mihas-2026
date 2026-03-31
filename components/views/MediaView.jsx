@@ -100,7 +100,7 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                                     {newsData.map((news) => (
                                         <Link href={`/news/${news.slug}`} key={news.id} className="group cursor-pointer border-slate-200 overflow-hidden flex flex-col hover:shadow-xl transition-all hover:-translate-y-1 duration-300 bg-white rounded-[32px] border shadow-sm">
                                             <div className="h-56 bg-slate-200 relative overflow-hidden flex items-center justify-center">
-                                                <img src={news.image} alt={news.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                                <img src={news.frontImage} alt={news.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                                                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
                                                 <div className="absolute top-4 left-4 bg-orange-600 text-white font-label px-3 py-1.5 rounded-full shadow-lg">News</div>
                                             </div>
