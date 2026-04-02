@@ -140,58 +140,131 @@ const AboutView = ({ subView, setSubView, onOpenForm }) => {
         )}
 
         {subView === 'getting-there' && (
-          <div className="space-y-16">
+          <div className="space-y-20">
             <div className="text-center max-w-2xl mx-auto">
               <h2 className="font-h2 text-slate-900 mb-4">Plan Your Visit With Exclusive Offers</h2>
-              <p className="font-body text-slate-600">Travel and stay in comfort during MIHAS 2025 with our official partners.</p>
+              <p className="font-body text-slate-600 italic">Travel and stay in comfort during MIHAS 2025 with our official partners.</p>
             </div>
 
-            <div>
-              <h3 className="font-h3 text-slate-900 mb-6 flex items-center gap-3"><Plane className="text-orange-600" /> Supporting Airline Partners</h3>
-              <div className="grid md:grid-cols-2 gap-6">
+            {/* Airline Partners */}
+            <div className="space-y-8">
+              <div className="flex items-center gap-4 bg-white p-6 rounded-[24px] shadow-sm border border-slate-100">
+                <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
+                  <Plane className="text-orange-600" />
+                </div>
+                <h3 className="font-h3 text-slate-900 uppercase tracking-wide">Supporting Airline Partners</h3>
+              </div>
+              <div className="grid md:grid-cols-2 gap-8">
                 {airlinePartners.map((partner, i) => (
-                  <Card key={i} className={`p-6 border-t-4 border-t-${partner.color}`}>
-                    <div className="flex justify-between items-start mb-4">
-                      <div>
-                        <h4 className="font-h4 text-slate-900">{partner.name}</h4>
-                        <div className="font-body-sm font-bold text-green-600">{partner.discount}</div>
+                  <Card key={i} className="group overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <div className="relative h-80 overflow-hidden">
+                      <img src={partner.image} alt={partner.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
+                      <div className="absolute bottom-6 left-6">
+                        <h4 className="font-h4 text-white text-xl">{partner.name}</h4>
+                        <div className="font-label text-orange-400">{partner.discount}</div>
                       </div>
                     </div>
-                    <div className="bg-orange-50 text-orange-800 px-4 py-3 rounded-lg mb-4 font-mono font-bold font-body-sm border border-orange-100 flex items-center justify-between">
-                      <span>Promo Code:</span>
-                      <span className="text-lg">{partner.promoCode}</span>
+                    <div className="p-8 space-y-6">
+                      <div className="bg-orange-50 text-orange-800 px-6 py-4 rounded-2xl font-mono font-bold font-body-sm border border-orange-100 flex items-center justify-between shadow-inner">
+                        <span className="text-xs uppercase tracking-widest opacity-60">Promo Code:</span>
+                        <span className="text-xl tracking-wider">{partner.promoCode}</span>
+                      </div>
+                      <div className="grid grid-cols-2 gap-4 text-[13px]">
+                        <div className="space-y-1">
+                          <div className="text-slate-400 font-label text-[10px] uppercase tracking-tighter">Sales Period</div>
+                          <div className="text-slate-700 font-body-sm font-semibold">{partner.salesPeriod}</div>
+                        </div>
+                        <div className="space-y-1 text-right">
+                          <div className="text-slate-400 font-label text-[10px] uppercase tracking-tighter">Travel Period</div>
+                          <div className="text-slate-700 font-body-sm font-semibold">{partner.travelPeriod}</div>
+                        </div>
+                      </div>
+                      <Button className="w-full group-hover:bg-orange-600">Book Flight</Button>
                     </div>
-                    <ul className="text-sm text-slate-600 space-y-2">
-                      <li><strong>Sales Period:</strong> {partner.salesPeriod}</li>
-                      <li><strong>Travel Period:</strong> {partner.travelPeriod}</li>
-                    </ul>
                   </Card>
                 ))}
               </div>
             </div>
 
-            <div>
-              <h3 className="font-h3 text-slate-900 mb-6 flex items-center gap-3"><Car className="text-orange-600" /> E-Hailing Partners</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
-                {ehailingPartners.map((ride, i) => (
-                  <Card key={i} className="p-5 flex flex-col h-full">
-                    <h4 className="font-h4 text-base text-slate-900 mb-1">{ride.title}</h4>
-                    <p className="font-body-sm font-bold text-green-600 mb-2">{ride.desc}</p>
-                    <p className="text-[10px] text-slate-400 mb-4 flex-1">Valid: {ride.valid}</p>
-                    <div className="bg-slate-100 px-3 py-2 rounded-lg font-mono font-bold font-body-sm text-slate-700 text-center">Code: {ride.code}</div>
-                  </Card>
-                ))}
+            {/* Accommodation Partners - MOVED UP */}
+            <div className="space-y-8">
+              <div className="flex items-center gap-4 bg-white p-6 rounded-[24px] shadow-sm border border-slate-100">
+                <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+                  <Hotel className="text-blue-600" />
+                </div>
+                <h3 className="font-h3 text-slate-900 uppercase tracking-wide">Accommodation Partners</h3>
               </div>
-            </div>
-
-            <div>
-              <h3 className="font-h3 text-slate-900 mb-6 flex items-center gap-3"><Hotel className="text-orange-600" /> Accommodation Partners</h3>
-              <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                 {hotelPartners.map((hotel, i) => (
-                  <Card key={i} className="p-5">
-                    <h4 className="font-h4 text-sm text-slate-900 mb-3 h-10">{hotel.name}</h4>
-                    <div className="bg-orange-50 px-2 py-1.5 rounded font-body-sm font-mono font-bold text-orange-800 flex justify-between">
-                      <span className="opacity-70">Code:</span> <span>{hotel.code}</span>
+                  <Card key={i} className="group flex flex-col h-full border-none shadow-md hover:shadow-xl transition-all duration-300">
+                    <div className="relative h-40 shrink-0">
+                      <img src={hotel.image} alt={hotel.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                      <div className="absolute top-3 right-3 bg-white/95 backdrop-blur px-3 py-1 rounded-full text-[11px] font-bold text-orange-600 shadow-sm border border-orange-100">
+                        {hotel.rate}
+                      </div>
+                    </div>
+                    <div className="p-5 flex-grow flex flex-col space-y-4">
+                      <div>
+                        <h4 className="font-h4 text-sm text-slate-900 mb-2 min-h-12 leading-tight">{hotel.name}</h4>
+                        <div className="flex items-center gap-2 text-slate-400 mb-1">
+                          <MapPin size={12} className="shrink-0" />
+                          <span className="text-[10px] truncate">{hotel.address}</span>
+                        </div>
+                      </div>
+                      
+                      <div className="grid grid-cols-2 gap-2 text-[10px] border-y border-slate-50 py-3">
+                        <div className="space-y-1">
+                          <div className="text-slate-400 uppercase tracking-tighter scale-90 origin-left">Distance</div>
+                          <div className="text-slate-800 font-bold">{hotel.distance}</div>
+                        </div>
+                        <div className="space-y-1 text-right">
+                          <div className="text-slate-400 uppercase tracking-tighter scale-90 origin-right">Shuttle</div>
+                          <div className="text-slate-800 font-bold truncate">{hotel.shuttle}</div>
+                        </div>
+                      </div>
+
+                      <div className="mt-auto pt-4 space-y-3">
+                        <div className="bg-slate-50 px-3 py-2 rounded-xl border border-slate-100 flex justify-between items-center group-hover:bg-orange-50 group-hover:border-orange-100 transition-colors">
+                          <span className="text-[9px] font-label text-slate-400 uppercase tracking-wider">Promo Code</span>
+                          <span className="font-mono font-bold text-slate-900 group-hover:text-orange-700">{hotel.code}</span>
+                        </div>
+                        <a href={hotel.link} target="_blank" rel="noopener noreferrer">
+                          <Button variant="outline" className="w-full text-xs h-9 font-label uppercase py-0 rounded-xl group-hover:bg-white group-hover:border-orange-500 group-hover:text-orange-600">Book Your Stay</Button>
+                        </a>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            {/* E-Hailing Partners - MOVED DOWN */}
+            <div className="space-y-8">
+              <div className="flex items-center gap-4 bg-white p-6 rounded-[24px] shadow-sm border border-slate-100">
+                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
+                  <Car className="text-green-600" />
+                </div>
+                <h3 className="font-h3 text-slate-900 uppercase tracking-wide">E-Hailing Partners</h3>
+              </div>
+              <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+                {ehailingPartners.map((ride, i) => (
+                  <Card key={i} className={`group p-6 flex flex-col h-full relative !overflow-visible transition-all duration-500 ease-[0.23,1,0.32,1] ${ride.isPreferred ? 'border-2 border-orange-400 ring-4 ring-orange-400/10' : 'border-slate-100 hover:border-orange-400 hover:bg-orange-50/50 hover:shadow-md'}`}>
+                    {ride.isPreferred && (
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-orange-500 text-white text-[9px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full whitespace-nowrap shadow-lg z-10 transition-all duration-500 ease-[0.23,1,0.32,1] group-hover:scale-110">
+                        Preferred E-Hailing Partner
+                      </div>
+                    )}
+                    <div className="h-16 flex items-center justify-center mb-4 p-2">
+                        <img src={ride.image} alt={ride.title} className="max-h-full max-w-full object-contain transition-transform duration-500 ease-[0.23,1,0.32,1] group-hover:scale-110" />
+                    </div>
+                    <div className="text-center flex-grow flex flex-col">
+                      <h4 className="font-h4 text-sm text-slate-900 mb-2 uppercase italic transition-colors duration-500 ease-[0.23,1,0.32,1] group-hover:text-orange-600">{ride.title}</h4>
+                      <p className="font-body-sm font-bold text-green-600 mb-2 leading-tight">{ride.desc}</p>
+                      <p className="text-[10px] text-slate-400 mb-6 mt-auto">Valid: {ride.valid}</p>
+                      <div className="bg-slate-900 text-white px-4 py-2 rounded-[14px] font-mono font-bold text-xs shadow-inner transition-all duration-500 ease-[0.23,1,0.32,1] group-hover:bg-orange-600 group-hover:shadow-lg group-hover:shadow-orange-600/20">
+                        <span className="opacity-50 text-[10px] mr-2">CODE:</span> {ride.code}
+                      </div>
                     </div>
                   </Card>
                 ))}

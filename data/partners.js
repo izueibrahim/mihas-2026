@@ -5,7 +5,8 @@ export const airlinePartners = [
         promoCode: "MHMHAS15",
         salesPeriod: "Now - 19 September 2025",
         travelPeriod: "10 September - 27 September 2025",
-        color: "blue-600"
+        color: "blue-600",
+        image: "/images/refrences/airline/mas.png"
     },
     {
         name: "Firefly Airlines",
@@ -13,27 +14,131 @@ export const airlinePartners = [
         promoCode: "FYMHAS15",
         salesPeriod: "Now - 18 September 2025",
         travelPeriod: "10 September - 27 September 2025",
-        color: "orange-500"
+        color: "orange-500",
+        image: "/images/refrences/airline/Firefly.png"
     }
 ];
 
 export const ehailingPartners = [
-    { title: "AirAsia Ride", code: "MIHAS", desc: "Get RM3 OFF to/from MITEC", valid: "15-22 Sept" },
-    { title: "MyCar", code: "MIHAS", desc: "Get RM3-RM5 OFF to/from MITEC", valid: "15-22 Sept" },
-    { title: "Grab", code: "MIHAS2025", desc: "Get up to RM5 OFF per ride", valid: "17-20 Sept" },
-    { title: "MyRide", code: "MIHAS", desc: "Get RM2 OFF to/from MITEC", valid: "15-22 Sept" },
-    { title: "Trek Rides", code: "MIHAS", desc: "Get RM2 OFF to/from MITEC", valid: "15-22 Sept" }
+    { 
+        title: "AirAsia Ride", 
+        code: "MIHAS", 
+        desc: "Get RM3 OFF to/from MITEC", 
+        valid: "15-22 Sept",
+        isPreferred: true,
+        image: "/images/refrences/e-hailing/aar_logo.png"
+    },
+    { 
+        title: "MyCar", 
+        code: "MIHAS", 
+        desc: "Get RM3-RM5 OFF to/from MITEC", 
+        valid: "15-22 Sept",
+        image: "/images/refrences/e-hailing/mycar.png"
+    },
+    { 
+        title: "Grab", 
+        code: "MIHAS2025", 
+        desc: "Get up to RM5 OFF per ride", 
+        valid: "17-20 Sept",
+        image: "/images/refrences/e-hailing/grab.png"
+    },
+    { 
+        title: "MyRide", 
+        code: "MIHAS", 
+        desc: "Get RM2 OFF to/from MITEC", 
+        valid: "15-22 Sept",
+        image: "/images/refrences/e-hailing/myride.jpg"
+    },
+    { 
+        title: "Trek Rides", 
+        code: "MIHAS", 
+        desc: "Get RM2 OFF to/from MITEC", 
+        valid: "15-22 Sept",
+        image: "/images/refrences/e-hailing/trek_logo_positive.png"
+    }
 ];
 
 export const hotelPartners = [
-    { name: "Hyatt House KL", code: "MITEC" },
-    { name: "Sunway Putra Hotel", code: "MIHAS 2025" },
-    { name: "Dorsett Hartamas", code: "MIHAS2025" },
-    { name: "EQ Kuala Lumpur", code: "MIHAS2025" },
-    { name: "M Resort & Hotel KL", code: "GRPMIHAS" },
-    { name: "Wedgewood Residences", code: "MIHAS 2025" },
-    { name: "Hyatt Regency KL", code: "G-QI01" },
-    { name: "Seri Pacific Hotel", code: "MIHAS 2025" }
+    { 
+        name: "Hyatt House Kuala Lumpur, Mont' Kiara", 
+        code: "MITEC",
+        address: "G-2, Arcoris, No. 10, Jalan Kiara, Mont' Kiara, 50480 Kuala Lumpur",
+        rate: "From RM 450 nett",
+        distance: "5.2 km (10 mins)",
+        shuttle: "Provided to MITEC",
+        image: "/images/refrences/accomodation/1-hyatt-house.png",
+        link: "https://www.hyatt.com/en-US/hotel/malaysia/hyatt-house-kuala-lumpur-mont-kiara/kulmk"
+    },
+    { 
+        name: "Sunway Putra Hotel", 
+        code: "MIHAS 2025",
+        address: "100, Jalan Putra, 50350 Kuala Lumpur",
+        rate: "From RM 320 nett",
+        distance: "11.0 km (20 mins)",
+        shuttle: "Not Provided",
+        image: "/images/refrences/accomodation/2-sunway-hotel.png",
+        link: "https://www.sunwayhotels.com/sunway-putra"
+    },
+    { 
+        name: "Dorsett Hartamas Kuala Lumpur", 
+        code: "MIHAS2025",
+        address: "D-G-8, Plaza Damas 3, No. 63, Jalan Sri Hartamas 1, 50480 Kuala Lumpur",
+        rate: "From RM 280 nett",
+        distance: "2.5 km (5 mins)",
+        shuttle: "Provided to MITEC",
+        image: "/images/refrences/accomodation/3-dorsett.png",
+        link: "https://www.dorsetthotels.com/dorsett-hartamas-kuala-lumpur"
+    },
+    { 
+        name: "EQ Kuala Lumpur", 
+        code: "MIHAS2025",
+        address: "EQ, Equatorial Plaza, Jalan Sultan Ismail, 50250 Kuala Lumpur",
+        rate: "From RM 650 nett",
+        distance: "8.2 km (18 mins)",
+        shuttle: "Not Provided",
+        image: "/images/refrences/accomodation/4-eq.png",
+        link: "https://www.eqkualalumpur.com"
+    },
+    { 
+        name: "M Resort & Hotel Kuala Lumpur", 
+        code: "GRPMIHAS",
+        address: "No. 1, Jalan KGPA, Bukit Kiara, 60000 Kuala Lumpur",
+        rate: "From RM 480 nett",
+        distance: "6.8 km (12 mins)",
+        shuttle: "Provided to Phileo Damansara MRT",
+        image: "/images/refrences/accomodation/5-m-resort.png",
+        link: "https://www.mresort-hotel.com.my"
+    },
+    { 
+        name: "Wedgewood Residences", 
+        code: "MIHAS 2025",
+        address: "No. 53, Jalan Kiara, Mont' Kiara, 50480 Kuala Lumpur",
+        rate: "From RM 250 nett",
+        distance: "4.8 km (8 mins)",
+        shuttle: "Provided to MITEC",
+        image: "/images/refrences/accomodation/6-wedgewood.png",
+        link: "http://www.wedgewoodresidences.com"
+    },
+    { 
+        name: "Hyatt Regency Kuala Lumpur", 
+        code: "G-QI01",
+        address: "KL Midtown, Jalan Dutamas 2, 50480 Kuala Lumpur",
+        rate: "From RM 550 nett",
+        distance: "5.5 km (12 mins)",
+        shuttle: "Not Provided",
+        image: "/images/refrences/accomodation/7-hyatt-regency.png",
+        link: "https://www.hyatt.com"
+    },
+    { 
+        name: "Seri Pacific Hotel Kuala Lumpur", 
+        code: "MIHAS 2025",
+        address: "Jalan Putra, 50350 Kuala Lumpur",
+        rate: "From RM 350 nett",
+        distance: "4.2 km (10 mins)",
+        shuttle: "Not Provided",
+        image: "/images/refrences/accomodation/8-seri-pacific.png",
+        link: "https://www.seripacifichotel.com"
+    }
 ];
 
 export const matradeNetwork = [
