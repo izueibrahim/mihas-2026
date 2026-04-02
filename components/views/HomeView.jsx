@@ -10,6 +10,7 @@ import SponsorShowcase from '../UI/SponsorShowcase';
 import { statsData } from '../../data/stats';
 import { newsData } from '../../data/news';
 import { blogs } from '../../data/blogs';
+import Link from 'next/link';
 
 const HomeView = ({ navigate, onOpenForm }) => (
   <div className="bg-white">
@@ -228,17 +229,21 @@ const HomeView = ({ navigate, onOpenForm }) => (
               <Button variant="ghost" onClick={() => navigate('awards')} className="text-orange-400 hover:text-white group hidden sm:flex">The Ceremony <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" /></Button>
             </div>
             <Card className="bg-slate-800 border-slate-700 text-white p-0 overflow-hidden ring-1 ring-white/5 shadow-2xl hover:shadow-orange-900/10 transition-all">
-              <div className="h-48 md:h-64 bg-slate-700 relative group overflow-hidden">
-                <img src="/images/photos-gallery/global-excellence.jpg" alt="Global Excellence" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                <Award size={120} className="text-slate-600 absolute bottom-4 right-4 opacity-20 group-hover:scale-110 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
-                <div className="absolute bottom-6 left-6 md:left-8">
-                  <div className="bg-orange-600 text-white font-ui px-4 py-1.5 rounded-full mb-2 inline-block">Event Highlight</div>
-                  <h3 className="font-h3 italic uppercase leading-none">Global Excellence</h3>
+              <Link href="/news/news1">
+                <div className="h-48 md:h-64 bg-slate-700 relative group overflow-hidden">
+                  <img src="/images/photos-gallery/global-excellence.jpg" alt="Global Excellence" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <Award size={120} className="text-slate-600 absolute bottom-4 right-4 opacity-20 group-hover:scale-110 transition-transform" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-6 left-6 md:left-8">
+                    <div className="bg-orange-600 text-white font-ui px-4 py-1.5 rounded-full mb-2 inline-block">Event Highlight</div>
+                    <h3 className="font-h3 italic uppercase leading-none">Global Excellence</h3>
+                  </div>
                 </div>
-              </div>
+              </Link>
               <div className="p-8 md:p-10 space-y-6">
-                <h3 className="font-h3 italic uppercase underline decoration-orange-500/30 underline-offset-8">Innovation and Sustainability Take Centre Stage</h3>
+                <Link href="/news/news1" className="block hover:text-orange-500 transition-colors">
+                  <h3 className="font-h3 italic uppercase underline decoration-orange-500/30 underline-offset-8 leading-tight">Excellence, Innovation and Sustainability Take Centre Stage at MIHAS Awards 2025</h3>
+                </Link>
                 <p className="text-slate-400 leading-relaxed font-medium">The Malaysia International Halal Showcase (MIHAS) Awards 2025 concluded with a celebration of excellence across various halal sectors, setting new benchmarks for the industry.</p>
                 <Button className="bg-white text-slate-900 hover:bg-orange-600 hover:text-white" onClick={() => navigate('awards')}>View All Winners</Button>
               </div>
@@ -251,7 +256,7 @@ const HomeView = ({ navigate, onOpenForm }) => (
               <h2 className="font-h3 text-white border-l-4 border-orange-500 pl-4 uppercase italic">Press Highlights</h2>
               <div className="space-y-2">
                 {newsData.slice(0, 4).map((news, i) => (
-                  <div key={i} onClick={() => navigate('media', 'news')} className="group flex items-center justify-between p-6 rounded-2xl bg-slate-800/40 hover:bg-slate-800 cursor-pointer border border-white/5 transition-all">
+                  <Link key={i} href={`/news/${news.slug}`} className="group flex items-center justify-between p-6 rounded-2xl bg-slate-800/40 hover:bg-slate-800 cursor-pointer border border-white/5 transition-all">
                     <div className="space-y-1 pr-4">
                       <div className="text-orange-500 font-label italic">{news.date}</div>
                       <div className="font-h4 group-hover:text-white transition-colors uppercase italic text-sm">
@@ -259,7 +264,7 @@ const HomeView = ({ navigate, onOpenForm }) => (
                       </div>
                     </div>
                     <ArrowRight size={20} className="text-slate-600 group-hover:text-orange-500 shrink-0 transition-all -translate-x-2 group-hover:translate-x-0" />
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -275,23 +280,25 @@ const HomeView = ({ navigate, onOpenForm }) => (
           <div className="grid md:grid-cols-3 gap-10">
             {blogs.slice(0, 3).map((blog, i) => (
               <motion.div key={blog.id} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.15, duration: 0.6 }} className="h-full">
-                <Card className="bg-slate-800 border-none text-white overflow-hidden group cursor-pointer hover:-translate-y-2 transition-all duration-500 flex flex-col h-full rounded-[32px] shadow-2xl shadow-black/20">
-                  <div className="h-48 bg-slate-700 relative overflow-hidden">
-                    <img src={blog.image} alt={blog.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                    <div className="absolute inset-0 bg-orange-600/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  </div>
-                  <div className="p-8 flex flex-col flex-grow">
-                    <span className="font-label text-slate-500 group-hover:text-orange-500 italic transition-colors">{blog.date}</span>
-                    <h3 className="font-h4 mt-4 mb-4 group-hover:text-white transition-colors line-clamp-2 uppercase italic">{blog.title}</h3>
-                    <p className="font-body-sm text-slate-400 line-clamp-3 mb-8 italic">{blog.excerpt}</p>
-                    <div className="mt-auto flex items-center justify-between pt-6 border-t border-white/5">
-                      <div className="flex items-center gap-2 font-label text-orange-500 italic group-hover:gap-4 transition-all">
-                        Read More <ArrowRight size={14} />
-                      </div>
-                      <div className="font-label text-slate-600">Article</div>
+                <Link href={`/blog/${blog.slug}`} className="block h-full group">
+                  <Card className="bg-slate-800 border-none text-white overflow-hidden group cursor-pointer hover:-translate-y-2 transition-all duration-500 flex flex-col h-full rounded-[32px] shadow-2xl shadow-black/20">
+                    <div className="h-48 bg-slate-700 relative overflow-hidden">
+                      <img src={blog.image} alt={blog.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                      <div className="absolute inset-0 bg-orange-600/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </div>
-                  </div>
-                </Card>
+                    <div className="p-8 flex flex-col flex-grow">
+                      <span className="font-label text-slate-500 group-hover:text-orange-500 italic transition-colors">{blog.date}</span>
+                      <h3 className="font-h4 mt-4 mb-4 group-hover:text-white transition-colors line-clamp-2 uppercase italic">{blog.title}</h3>
+                      <p className="font-body-sm text-slate-400 line-clamp-3 mb-8 italic">{blog.excerpt}</p>
+                      <div className="mt-auto flex items-center justify-between pt-6 border-t border-white/5">
+                        <div className="flex items-center gap-2 font-label text-orange-500 italic group-hover:gap-4 transition-all">
+                          Read More <ArrowRight size={14} />
+                        </div>
+                        <div className="font-label text-slate-600">Article</div>
+                      </div>
+                    </div>
+                  </Card>
+                </Link>
               </motion.div>
             ))}
           </div>

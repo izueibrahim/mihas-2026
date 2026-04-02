@@ -60,7 +60,7 @@ const AboutView = ({ subView, setSubView, onOpenForm }) => {
                   </li>
                   <li>
                     <strong className="block text-slate-400 font-label mb-2 italic">Managed By:</strong>
-                    <div className="text-white font-h4">Qube Integrated (Malaysia) Sdn. Bhd.</div>
+                    <div className="text-white font-h4">ES Exhibition Services Sdn. Bhd.</div>
                   </li>
                 </ul>
               </Card>
@@ -69,17 +69,58 @@ const AboutView = ({ subView, setSubView, onOpenForm }) => {
         )}
 
         {subView === 'organisers' && (
-          <div className="grid md:grid-cols-2 gap-8">
-             <Card className="p-8">
-                <div className="font-label text-orange-600 mb-2">Host</div>
-                <h3 className="font-h3 text-slate-900 mb-4">Ministry Of Investment, Trade And Industry (MITI), Malaysia</h3>
-                <p className="font-body text-slate-600">The Ministry of Investment, Trade and Industry Malaysia (MITI) oversees Malaysia's international trade and investment interest. Its policies and commitment to spur economic and industrial activity have resulted in Malaysia being one of the top trading nations in the world.</p>
-             </Card>
-             <Card className="p-8">
-                <div className="font-label text-orange-600 mb-2">Organiser</div>
-                <h3 className="font-h3 text-slate-900 mb-4">Malaysia External Trade Development Corporation (MATRADE)</h3>
-                <p className="font-body text-slate-600">The Malaysia External Trade Development Corporation (MATRADE) develops and promotes Malaysia's exports across the globe and is represented in 46 locations worldwide. MATRADE provides endorsements and promotional support of International Trade Exhibitions and Conferences held in Malaysia.</p>
-             </Card>
+          <div className="space-y-6">
+             {[
+               {
+                 role: "Host",
+                 logo: "/images/organisers/miti.png",
+                 name: "Ministry Of Investment, Trade And Industry (MITI), Malaysia",
+                 desc: "The Ministry of Investment, Trade and Industry Malaysia (MITI) oversees Malaysia’s international trade and investment interest. Its policies and commitment to spur economic and industrial activity have resulted in Malaysia being one of the top trading nations in the world."
+               },
+               {
+                 role: "Organiser",
+                 logo: "/images/organisers/matrade.png",
+                 name: "Malaysia External Trade Development Corporation (MATRADE)",
+                 desc: "The Malaysia External Trade Development Corporation (MATRADE) develops and promotes Malaysia’s exports across the globe and is represented in 46 locations worldwide. In Malaysia, MATRADE has five local branches in Penang, Terengganu, Johor, Sabah and Sarawak. MATRADE provides endorsements and promotional support of International Trade Exhibitions and Conferences held in Malaysia."
+               },
+               {
+                 role: "In Association With",
+                 logo: "/images/organisers/hdc.png",
+                 name: "Halal Development Corporation Berhad (HDC)",
+                 desc: "Halal Development Corporation (HDC) was established in 2006 to co-ordinate the overall development of the Halal industry in Malaysia. HDC promotes participation and facilitates growth of Malaysian companies in the global Halal market."
+               },
+               {
+                 role: "In Association With",
+                 logo: "/images/organisers/jakim.png",
+                 name: "Department of Islamic Development Malaysia (JAKIM)",
+                 desc: "JAKIM is the lead government agency promoting the development of Islam in Malaysia. It is the sole Halal certification body in Malaysia and is widely recognised as the world leader in Halal Certification."
+               },
+               {
+                 role: "Managed By",
+                 logo: "/images/organisers/es.png",
+                 name: "ES Exhibition Services Sdn. Bhd.",
+                 desc: "With 30 years in the industry, ES has established itself as a leader in the ASEAN exhibition and event management sector, built on the core values of integrity, dedication, and the importance of relationships. ES values connections with its people, partners, and clients, driving its vision to not only meet but exceed the evolving standards of the industry."
+               }
+             ].map((org, index) => (
+               <motion.div
+                 key={index}
+                 initial={{ opacity: 0, y: 40 }}
+                 whileInView={{ opacity: 1, y: 0 }}
+                 viewport={{ once: true, margin: "-50px" }}
+                 transition={{ duration: 0.7, delay: index * 0.1, ease: [0.21, 0.45, 0.32, 0.9] }}
+               >
+                 <Card className="p-8 md:p-10 flex flex-col md:flex-row gap-8 md:gap-12 items-center md:items-start hover:shadow-xl transition-all duration-300 border-slate-100 hover:border-orange-200">
+                    <div className="w-48 md:w-56 shrink-0 flex items-center justify-center p-6 bg-white rounded-[32px] border border-slate-100 shadow-sm transition-transform duration-500 group-hover:scale-105">
+                        <img src={org.logo} alt={org.role} className="w-full h-auto object-contain" />
+                    </div>
+                    <div className="flex-grow space-y-4 text-center md:text-left">
+                        <div className="font-label text-orange-600 uppercase tracking-widest text-xs">{org.role}</div>
+                        <h3 className="font-h3 text-slate-900 uppercase italic leading-tight">{org.name}</h3>
+                        <p className="font-body text-slate-600 max-w-4xl">{org.desc}</p>
+                    </div>
+                 </Card>
+               </motion.div>
+             ))}
           </div>
         )}
 
