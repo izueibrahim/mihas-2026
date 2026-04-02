@@ -6,7 +6,7 @@ export function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
 
-const Button = ({ children, variant = 'primary', className = '', ...props }) => {
+const Button = ({ children, variant = 'primary', className = '', as = 'button', ...props }) => {
   const baseStyle = "px-8 py-4 rounded-xl font-button transition-all inline-flex items-center justify-center gap-2 text-sm";
   const variants = {
     primary: "bg-orange-600 text-white hover:bg-orange-700 shadow-sm",
@@ -14,7 +14,9 @@ const Button = ({ children, variant = 'primary', className = '', ...props }) => 
     outline: "border border-slate-300 text-slate-700 hover:border-orange-500 hover:text-orange-600 bg-white",
     ghost: "text-slate-600 hover:text-orange-600 hover:bg-orange-50"
   };
-  return <button className={cn(baseStyle, variants[variant], className)} {...props}>{children}</button>;
+
+  const Component = as;
+  return <Component className={cn(baseStyle, variants[variant], className)} {...props}>{children}</Component>;
 };
 
 export default Button;
