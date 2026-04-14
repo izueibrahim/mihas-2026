@@ -27,16 +27,18 @@ export const contactTabs = [
 export const navLinks = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About MIHAS', defaultSub: 'overview', subs: aboutTabs },
-  { id: 'programme', label: 'Show Programme' },
-  { id: 'directory', label: 'e-Directory' },
-  { id: 'awards', label: 'MIHAS Awards' },
-  { id: 'insp', label: 'INSP' },
+  // { id: 'programme', label: 'Show Programme' },
+  // { id: 'directory', label: 'e-Directory' },
+  // { id: 'awards', label: 'MIHAS Awards' },
+  // { id: 'insp', label: 'INSP' },
   { id: 'visitor', label: 'Visitor', defaultSub: 'why-visit', subs: visitorTabs },
-  { id: 'exhibitor', label: 'Exhibitor', defaultSub: 'why-exhibit', subs: [
-    { id: 'why-exhibit', label: 'Why Exhibit' },
-    { id: 'who-should-exhibit', label: 'Who Should Exhibit' },
-    { id: 'incentives', label: 'Exhibitor Incentives' }
-  ] },
+  {
+    id: 'exhibitor', label: 'Exhibitor', defaultSub: 'why-exhibit', subs: [
+      { id: 'why-exhibit', label: 'Why Exhibit' },
+      { id: 'who-should-exhibit', label: 'Who Should Exhibit' },
+      { id: 'incentives', label: 'Exhibitor Incentives' }
+    ]
+  },
   { id: 'media', label: 'Media', defaultSub: 'registration', subs: mediaTabs },
   { id: 'contact', label: 'Contact', defaultSub: 'contact-us', subs: contactTabs },
 ];

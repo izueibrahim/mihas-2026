@@ -7,10 +7,10 @@ import Header from '../components/layout/Header';
 import Footer from '../components/layout/Footer';
 import HomeView from '../components/views/HomeView';
 import AboutView from '../components/views/AboutView';
-import ProgrammeView from '../components/views/ProgrammeView';
-import DirectoryView from '../components/views/DirectoryView';
-import AwardsView from '../components/views/AwardsView';
-import InspView from '../components/views/InspView';
+// import ProgrammeView from '../components/views/ProgrammeView';
+// import DirectoryView from '../components/views/DirectoryView';
+// import AwardsView from '../components/views/AwardsView';
+// import InspView from '../components/views/InspView';
 import VisitorView from '../components/views/VisitorView';
 import ExhibitorView from '../components/views/ExhibitorView';
 import MediaView from '../components/views/MediaView';
@@ -27,7 +27,7 @@ export default function MihasWebsite() {
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
-    
+
     // Hash-based Routing Persistence
     const syncFromHash = () => {
       const hash = window.location.hash.replace('#', '');
@@ -41,7 +41,7 @@ export default function MihasWebsite() {
 
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('hashchange', syncFromHash);
-    
+
     // Initial sync
     syncFromHash();
 
@@ -80,15 +80,15 @@ export default function MihasWebsite() {
 
   return (
     <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-orange-100 selection:text-orange-900 flex flex-col">
-      <Header 
-        navLinks={navLinks} 
-        currentView={currentView} 
-        navigate={navigate} 
-        isMobileMenuOpen={isMobileMenuOpen} 
-        setIsMobileMenuOpen={setIsMobileMenuOpen} 
+      <Header
+        navLinks={navLinks}
+        currentView={currentView}
+        navigate={navigate}
+        isMobileMenuOpen={isMobileMenuOpen}
+        setIsMobileMenuOpen={setIsMobileMenuOpen}
         onOpenForm={handleOpenForm}
       />
-      
+
       <main className="flex-grow relative overflow-x-hidden">
         <AnimatePresence mode="wait">
           <motion.div
