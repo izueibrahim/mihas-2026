@@ -32,8 +32,8 @@ const AboutView = ({ subView, setSubView, onOpenForm }) => {
                     </div>
                     <p className="font-body text-slate-600">The 21st MIHAS will place special emphasis on the agenda of helping local and international players look to innovation and sustainable initiatives to spearhead steady growth for the Halal economy.</p>
 
-                    <h3 className="font-h3 text-slate-900 mt-12 mb-6 uppercase">MIHAS 2025 - The Biggest and Boldest Edition</h3>
-                    <p className="font-body text-slate-600">MIHAS 2025 Hybrid Edition combines the best of both conventional exhibition and virtual version. Featuring physical exhibitions together with exhibition booths with full multimedia microsite for product and services showcase.</p>
+                    <h3 className="font-h3 text-slate-900 mt-12 mb-6 uppercase">MIHAS 2026 - The Biggest and Boldest Edition</h3>
+                    <p className="font-body text-slate-600">MIHAS 2026 Hybrid Edition combines the best of both conventional exhibition and virtual version. Featuring physical exhibitions together with exhibition booths with full multimedia microsite for product and services showcase.</p>
 
                     <div className="flex flex-wrap gap-4 mt-12">
                       <Button className="shadow-xl shadow-orange-900/10" onClick={() => onOpenForm('exhibitor')}>Book Exhibition Space</Button>
