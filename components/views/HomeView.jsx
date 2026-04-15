@@ -212,7 +212,7 @@ const HomeView = ({ navigate, onOpenForm }) => (
           "The event has become the largest gathering of those who are in this segment specifically. It is now the largest trade show for the industry and it keeps growing."
         </p>
         <div className="space-y-2">
-          <div className="font-h4 italic text-slate-900">Rafi-uddin Shikoh</div>
+          <div className="font-h4 text-slate-900">Rafi-uddin Shikoh</div>
           <div className="text-orange-600 font-label">CEO DinarStandard USA</div>
         </div>
       </div>

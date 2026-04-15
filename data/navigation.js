@@ -2,7 +2,7 @@ export const aboutTabs = [
   { id: 'overview', label: 'MIHAS Overview' },
   { id: 'organisers', label: 'Organisers' },
   { id: 'venue', label: 'The Venue' },
-  { id: 'getting-there', label: 'Getting There' },
+  // { id: 'getting-there', label: 'Getting There' },
   { id: 'shuttle', label: 'Free Shuttle Services' }
 ];
 
