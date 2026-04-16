@@ -24,16 +24,16 @@ const AboutView = ({ subView, setSubView, onOpenForm }) => {
               <div className="grid lg:grid-cols-3 gap-12">
                 <div className="lg:col-span-2 space-y-8">
                   <div className="prose prose-lg max-w-none text-slate-700">
-                    <h2 className="font-h2 text-slate-900 mb-8 italic decoration-orange-500/30 underline underline-offset-8">The World's Largest Halal Showcase</h2>
+                    <h2 className="font-h2 text-slate-900 mb-8  decoration-orange-500/30 underline underline-offset-8">The World's Largest Halal Showcase</h2>
                     <p className="font-body text-slate-600">Since its inception in 2004, MIHAS has become an event for local and foreign businesses to thrive in the Halal trade and to contribute significantly to the global Halal economy.</p>
                     <p className="font-body text-slate-600">In 2024, MIHAS had attracted over 43,000 trade visitors, resulted in total immediate and negotiated trade value of over RM4.30 billion.</p>
                     <div className="bg-orange-50 border-l-4 border-orange-500 p-8 my-10 rounded-r-3xl">
-                      <p className="text-orange-900 font-h4 italic">"MIHAS is a robust marketplace for both international and local players to seize opportunities beyond Halal food including Halal pharmaceutical, medical devices, finance, modest fashion, personal care and cosmetics, green technologies and even Muslim-friendly tourism."</p>
+                      <p className="text-orange-900 font-h4">"MIHAS is a robust marketplace for both international and local players to seize opportunities beyond Halal food including Halal pharmaceutical, medical devices, finance, modest fashion, personal care and cosmetics, green technologies and even Muslim-friendly tourism."</p>
                     </div>
                     <p className="font-body text-slate-600">The 21st MIHAS will place special emphasis on the agenda of helping local and international players look to innovation and sustainable initiatives to spearhead steady growth for the Halal economy.</p>
 
-                    <h3 className="font-h3 text-slate-900 mt-12 mb-6 uppercase">MIHAS 2026 - The Biggest and Boldest Edition</h3>
-                    <p className="font-body text-slate-600">MIHAS 2026 Hybrid Edition combines the best of both conventional exhibition and virtual version. Featuring physical exhibitions together with exhibition booths with full multimedia microsite for product and services showcase.</p>
+                    <h3 className="font-h3 text-slate-900 mt-12 mb-6 uppercase">MIHAS 2025 - The Biggest and Boldest Edition</h3>
+                    <p className="font-body text-slate-600">MIHAS 2025 Hybrid Edition combines the best of both conventional exhibition and virtual version. Featuring physical exhibitions together with exhibition booths with full multimedia microsite for product and services showcase.</p>
 
                     <div className="flex flex-wrap gap-4 mt-12">
                       <Button className="shadow-xl shadow-orange-900/10" onClick={() => onOpenForm('exhibitor')}>Book Exhibition Space</Button>
@@ -47,19 +47,19 @@ const AboutView = ({ subView, setSubView, onOpenForm }) => {
                     <h4 className="font-label mb-10 text-orange-400 flex items-center gap-3">Key Organisers <div className="w-10 h-[1px] bg-orange-500/30"></div></h4>
                     <ul className="space-y-8 text-sm">
                       <li>
-                        <strong className="block text-slate-400 font-label mb-2 italic">Hosted By:</strong>
+                        <strong className="block text-slate-400 font-label mb-2">Hosted By:</strong>
                         <div className="text-white font-h4">Ministry of Investment, Trade and Industry (MITI)</div>
                       </li>
                       <li>
-                        <strong className="block text-slate-400 font-label mb-2 italic">Organised By:</strong>
+                        <strong className="block text-slate-400 font-label mb-2">Organised By:</strong>
                         <div className="text-white font-h4">Malaysia External Trade Development Corporation (MATRADE)</div>
                       </li>
                       <li>
-                        <strong className="block text-slate-400 font-label mb-2 italic">In Association With:</strong>
+                        <strong className="block text-slate-400 font-label mb-2">In Association With:</strong>
                         <div className="text-white font-h4">Halal Development Corporation (HDC)<br />Department Of Islamic Development (JAKIM)</div>
                       </li>
                       <li>
-                        <strong className="block text-slate-400 font-label mb-2 italic">Managed By:</strong>
+                        <strong className="block text-slate-400 font-label mb-2">Managed By:</strong>
                         <div className="text-white font-h4">ES Exhibition Services Sdn. Bhd.</div>
                       </li>
                     </ul>
@@ -115,7 +115,7 @@ const AboutView = ({ subView, setSubView, onOpenForm }) => {
                       </div>
                       <div className="flex-grow space-y-4 text-center md:text-left">
                         <div className="font-label text-orange-600 uppercase tracking-widest text-xs">{org.role}</div>
-                        <h3 className="font-h3 text-slate-900 uppercase italic leading-tight">{org.name}</h3>
+                        <h3 className="font-h3 text-slate-900 uppercase leading-tight">{org.name}</h3>
                         <p className="font-body text-slate-600 max-w-4xl">{org.desc}</p>
                       </div>
                     </Card>
@@ -143,7 +143,7 @@ const AboutView = ({ subView, setSubView, onOpenForm }) => {
               <div className="space-y-20">
                 <div className="text-center max-w-2xl mx-auto">
                   <h2 className="font-h2 text-slate-900 mb-4">Plan Your Visit With Exclusive Offers</h2>
-                  <p className="font-body text-slate-600 italic">Travel and stay in comfort during MIHAS 2025 with our official partners.</p>
+                  <p className="font-body text-slate-600">Travel and stay in comfort during MIHAS 2025 with our official partners.</p>
                 </div>
 
                 {/* Airline Partners */}
@@ -259,7 +259,7 @@ const AboutView = ({ subView, setSubView, onOpenForm }) => {
                           <img src={ride.image} alt={ride.title} className="max-h-full max-w-full object-contain transition-transform duration-500 ease-[0.23,1,0.32,1] group-hover:scale-110" />
                         </div>
                         <div className="text-center flex-grow flex flex-col">
-                          <h4 className="font-h4 text-sm text-slate-900 mb-2 uppercase italic transition-colors duration-500 ease-[0.23,1,0.32,1] group-hover:text-orange-600">{ride.title}</h4>
+                          <h4 className="font-h4 text-sm text-slate-900 mb-2 uppercase transition-colors duration-500 ease-[0.23,1,0.32,1] group-hover:text-orange-600">{ride.title}</h4>
                           <p className="font-body-sm font-bold text-green-600 mb-2 leading-tight">{ride.desc}</p>
                           <p className="text-[10px] text-slate-400 mb-6 mt-auto">Valid: {ride.valid}</p>
                           <div className="bg-slate-900 text-white px-4 py-2 rounded-[14px] font-mono font-bold text-xs shadow-inner transition-all duration-500 ease-[0.23,1,0.32,1] group-hover:bg-orange-600 group-hover:shadow-lg group-hover:shadow-orange-600/20">

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { 
-    Briefcase, Users, Handshake, CheckCircle2, Globe, Monitor, MapPin, 
-    Calendar, Clock, Mail, Leaf, Shirt, Coffee, Utensils, Hand, 
-    Droplets, Pill, Wrench, Gift, Package, PawPrint, Watch, Footprints, 
+import {
+    Briefcase, Users, Handshake, CheckCircle2, Globe, Monitor, MapPin,
+    Calendar, Clock, Mail, Leaf, Shirt, Coffee, Utensils, Hand,
+    Droplets, Pill, Wrench, Gift, Package, PawPrint, Watch, Footprints,
     Truck, Banknote, Store, Laptop, Tv, GraduationCap
 } from 'lucide-react';
 import PageHeader from '../UI/PageHeader';
@@ -37,19 +37,19 @@ const InspView = () => {
     return (
         <div className="animate-in fade-in bg-slate-50 min-h-screen pb-20">
             <PageHeader title="INSP MIHAS" breadcrumb="Sourcing" subtitle="International Sourcing Programme (INSP)" />
-            
+
             <div className="max-w-7xl mx-auto px-6 mt-12 space-y-16">
                 {/* Hero Section */}
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h2 className="font-h1 text-slate-900 mb-6 uppercase italic">Your Gateway to Global Halal Trade</h2>
+                        <h2 className="font-h1 text-slate-900 mb-6 uppercase">Your Gateway to Global Halal Trade</h2>
                         <p className="font-body-lg text-slate-600 mb-6">The International Sourcing Programme (INSP) MIHAS is a flagship business matching event that connects international buyers with Malaysian Halal suppliers.</p>
                         <p className="text-slate-600 mb-8 border-l-4 border-orange-500 pl-4 font-label">Organised by MATRADE</p>
                         <p className="font-body text-slate-600 mb-8">Through pre-arranged B2B meetings, we ensure a higher success rate for trade transactions. This year, INSP connects over 800 Malaysian companies with over 500 international buyers.</p>
                         <div className="flex flex-wrap gap-4">
-                            <Button 
-                                as="a" 
-                                href="https://tpms.matrade.gov.my/matrade-tpms/promotionRegistrationPublicSubmitSearch/16284?" 
+                            <Button
+                                as="a"
+                                href="https://tpms.matrade.gov.my/matrade-tpms/promotionRegistrationPublicSubmitSearch/16284?"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -86,7 +86,7 @@ const InspView = () => {
                 <div className="space-y-8 bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-sm">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-b border-slate-100 pb-8">
                         <div className="text-center md:text-left">
-                            <h2 className="font-h2 text-slate-900 italic uppercase">Participation Sessions</h2>
+                            <h2 className="font-h2 text-slate-900 uppercase">Participation Sessions</h2>
                             <p className="text-slate-500 mt-1 font-body-sm">Select your preferred session type to view details and deadlines</p>
                         </div>
                         <div className="flex bg-slate-100 p-1.5 rounded-2xl shadow-inner border border-slate-200/50">
@@ -105,7 +105,7 @@ const InspView = () => {
                                 <Card className="p-8 border-slate-200 hover:border-orange-200 transition-colors">
                                     <h3 className="font-label text-orange-600 mb-4 flex items-center gap-2 uppercase tracking-wider"><MapPin size={16} /> Venue</h3>
                                     <p className="font-h4 text-slate-900">MITEC, Kuala Lumpur</p>
-                                    <p className="text-slate-500 mt-1 font-body-sm italic">Level 2, Hall 5</p>
+                                    <p className="text-slate-500 mt-1 font-body-sm">Level 2, Hall 5</p>
                                 </Card>
                                 <Card className="p-8 border-slate-200 hover:border-orange-200 transition-colors">
                                     <h3 className="font-label text-orange-600 mb-4 flex items-center gap-2 uppercase tracking-wider"><Calendar size={16} /> Date & Deadline</h3>
@@ -115,7 +115,7 @@ const InspView = () => {
                                 <Card className="p-8 border-slate-200 hover:border-orange-200 transition-colors">
                                     <h3 className="font-label text-orange-600 mb-4 flex items-center gap-2 uppercase tracking-wider"><Clock size={16} /> Time</h3>
                                     <p className="font-h4 text-slate-900">9:00 AM - 5:00 PM</p>
-                                    <p className="text-slate-500 mt-1 font-body-sm italic">B2B Business Matching</p>
+                                    <p className="text-slate-500 mt-1 font-body-sm">B2B Business Matching</p>
                                 </Card>
                             </>
                         ) : (
@@ -123,7 +123,7 @@ const InspView = () => {
                                 <Card className="p-8 border-slate-200 hover:border-blue-200 transition-colors">
                                     <h3 className="font-label text-blue-600 mb-4 flex items-center gap-2 uppercase tracking-wider"><Monitor size={16} /> Platform</h3>
                                     <p className="font-h4 text-slate-900">MIHAS Virtual Platform</p>
-                                    <p className="text-slate-500 mt-1 font-body-sm italic">Pre-scheduled video calls</p>
+                                    <p className="text-slate-500 mt-1 font-body-sm">Pre-scheduled video calls</p>
                                 </Card>
                                 <Card className="p-8 border-slate-200 hover:border-blue-200 transition-colors">
                                     <h3 className="font-label text-blue-600 mb-4 flex items-center gap-2 uppercase tracking-wider"><Calendar size={16} /> Period & Deadline</h3>
@@ -133,7 +133,7 @@ const InspView = () => {
                                 <Card className="p-8 border-slate-200 hover:border-blue-200 transition-colors">
                                     <h3 className="font-label text-blue-600 mb-4 flex items-center gap-2 uppercase tracking-wider"><Users size={16} /> Interaction</h3>
                                     <p className="font-h4 text-slate-900">24/7 Connectivity</p>
-                                    <p className="text-slate-500 mt-1 font-body-sm italic">Global timezone support</p>
+                                    <p className="text-slate-500 mt-1 font-body-sm">Global timezone support</p>
                                 </Card>
                             </>
                         )}
@@ -145,7 +145,7 @@ const InspView = () => {
                     <div className="absolute top-0 right-0 w-96 h-96 bg-orange-600/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
                     <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <h2 className="font-h2 text-white mb-6 italic uppercase underline decoration-orange-500 underline-offset-8">Participation Fee</h2>
+                            <h2 className="font-h2 text-white mb-6 uppercase underline decoration-orange-500 underline-offset-8">Participation Fee</h2>
                             <div className="flex items-baseline gap-4 mb-8">
                                 <span className="text-6xl font-h1 text-orange-500">RM 120.00</span>
                                 <span className="font-body text-slate-400">per company</span>
@@ -166,7 +166,7 @@ const InspView = () => {
                             </div>
                         </div>
                         <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 space-y-6">
-                            <h3 className="font-h4 text-orange-400 uppercase italic">Package Inclusions:</h3>
+                            <h3 className="font-h4 text-orange-400 uppercase">Package Inclusions:</h3>
                             <ul className="space-y-4">
                                 <li className="flex gap-4">
                                     <div className="shrink-0 w-6 h-6 rounded-full bg-orange-500/20 text-orange-500 flex items-center justify-center mt-1"><CheckCircle2 size={16} /></div>
@@ -188,7 +188,7 @@ const InspView = () => {
                 {/* Product Categories Section - FINAL DESIGN */}
                 <div className="space-y-12">
                     <div>
-                        <h2 className="font-h2 text-slate-900 italic uppercase">Product Categories</h2>
+                        <h2 className="font-h2 text-slate-900 uppercase">Product Categories</h2>
                         <p className="text-slate-500 mt-1 font-body-sm">Promoting innovative products and services across various industries</p>
                     </div>
 
@@ -211,7 +211,7 @@ const InspView = () => {
                 <div className="grid md:grid-cols-2 gap-12 pt-12">
                     <div className="bg-slate-900 rounded-3xl p-10 text-white shadow-2xl relative overflow-hidden group">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-orange-600/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
-                        <h3 className="font-h3 text-white mb-8 flex items-center gap-3 italic uppercase"><Monitor className="text-orange-500" /> Participation Benefits</h3>
+                        <h3 className="font-h3 text-white mb-8 flex items-center gap-3 uppercase"><Monitor className="text-orange-500" /> Participation Benefits</h3>
                         <ul className="space-y-6">
                             {[
                                 { title: "Global Network", desc: "Gain access to a vast network of international buyers." },
@@ -228,10 +228,10 @@ const InspView = () => {
                     </div>
 
                     <div className="space-y-6">
-                        <h3 className="font-h3 text-slate-900 px-2 italic uppercase">Ready to expand your market?</h3>
+                        <h3 className="font-h3 text-slate-900 px-2 uppercase">Ready to expand your market?</h3>
                         <p className="font-body text-slate-600 px-2">Join INSP MIHAS 2025 and connect with top-tier buyers from all corners of the world. Limited slots available for premium matching.</p>
                         <div className="bg-white border rounded-3xl p-8 shadow-sm">
-                            <h4 className="font-h4 text-slate-900 mb-4 italic uppercase">Registration Procedure</h4>
+                            <h4 className="font-h4 text-slate-900 mb-4 uppercase">Registration Procedure</h4>
                             <div className="space-y-6">
                                 <div className="flex gap-4">
                                     <div className="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center font-label text-slate-400">01</div>
@@ -246,9 +246,9 @@ const InspView = () => {
                                     <div className="font-body-sm text-slate-700">Confirmation of meeting schedule via email</div>
                                 </div>
                                 <div className="pt-4">
-                                    <Button 
-                                        as="a" 
-                                        href="https://tpms.matrade.gov.my/matrade-tpms/promotionRegistrationPublicSubmitSearch/16284?" 
+                                    <Button
+                                        as="a"
+                                        href="https://tpms.matrade.gov.my/matrade-tpms/promotionRegistrationPublicSubmitSearch/16284?"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="w-full"

@@ -98,10 +98,10 @@ const HomeView = ({ navigate, onOpenForm }) => (
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
         <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8 }} className="space-y-8">
           <h3 className="text-orange-600 font-label">MIHAS Heritage</h3>
-          <h2 className="font-h1 text-slate-900 italic">
+          <h2 className="font-h1 text-slate-900">
             Global Halal <br />Leadership.
           </h2>
-          <p className="font-body-lg text-slate-500 italic">The 22nd edition of MIHAS will be a 4-day trade showcase held in Kuala Lumpur, Malaysia, alongside the MIHAS Virtual platform. Since 2004, we've set the standard for Halal excellence.</p>
+          <p className="font-body-lg text-slate-500">The 22nd edition of MIHAS will be a 4-day trade showcase held in Kuala Lumpur, Malaysia, alongside the MIHAS Virtual platform. Since 2004, we've set the standard for Halal excellence.</p>
           <div className="pt-4">
             <Button variant="outline" className="border-slate-200" onClick={() => navigate('about')}>About MIHAS Excellence</Button>
           </div>
@@ -136,8 +136,8 @@ const HomeView = ({ navigate, onOpenForm }) => (
           <div className="absolute inset-0 bg-slate-900/70 z-10 group-hover:bg-slate-900/50 transition-colors duration-500"></div>
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full translate-x-1/2 -translate-y-1/2 group-hover:scale-110 transition-transform duration-700 z-10"></div>
           <div className="relative z-20 space-y-8 text-center">
-            <h3 className="font-h2 italic uppercase leading-none text-white">Exhibitor<br />Incentives</h3>
-            <p className="text-white/80 font-medium uppercase tracking-tight italic">Unlock unparalleled access to OIC markets and beyond.</p>
+            <h3 className="font-h2 uppercase leading-none text-white">Exhibitor<br />Incentives</h3>
+            <p className="text-white/80 font-medium uppercase tracking-tight">Unlock unparalleled access to OIC markets and beyond.</p>
             <Button
               className="bg-white text-slate-900 hover:bg-orange-600 hover:text-white mx-auto"
               onClick={() => navigate('exhibitor', 'incentives')}
@@ -162,8 +162,8 @@ const HomeView = ({ navigate, onOpenForm }) => (
           />
           <div className="absolute inset-0 bg-orange-600/80 z-10 group-hover:bg-orange-600/70 transition-colors duration-500"></div>
           <div className="relative z-20 space-y-8 text-center">
-            <h3 className="font-h2 italic uppercase leading-none text-slate-900">Registration<br />is Open</h3>
-            <p className="text-orange-100 font-body italic">Secure your space before early bird passes expire.</p>
+            <h3 className="font-h2 uppercase leading-none text-slate-900">Registration<br />is Open</h3>
+            <p className="text-orange-100 font-body">Secure your space before early bird passes expire.</p>
             <Button
               className="bg-slate-900 text-white hover:bg-white hover:text-slate-900 shadow-2xl shadow-orange-950/20 mx-auto"
               onClick={() => onOpenForm('exhibitor')}
@@ -189,12 +189,12 @@ const HomeView = ({ navigate, onOpenForm }) => (
           <div className="absolute inset-0 bg-slate-50/90 z-10 group-hover:bg-slate-50/80 transition-colors duration-500"></div>
           <div className="absolute bottom-0 right-0 w-64 h-64 bg-orange-600/5 rounded-full translate-x-1/2 translate-y-1/2 group-hover:scale-110 transition-transform duration-700 z-10"></div>
           <div className="relative z-20 space-y-8 text-center">
-            <h3 className="font-h2 italic uppercase leading-none text-slate-900 underline decoration-orange-500/20 underline-offset-8">At a <br />Glance</h3>
+            <h3 className="font-h2 uppercase leading-none text-slate-900 underline decoration-orange-500/20 underline-offset-8">At a <br />Glance</h3>
             <div className="flex items-center justify-center gap-6">
               <button className="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full bg-slate-900 text-white flex items-center justify-center hover:scale-110 shadow-2xl transition-all group-hover:bg-orange-600">
                 <Play className="ml-1" size={28} />
               </button>
-              <span className="font-ui italic text-slate-400 text-left">Watch <br />Showcase Film</span>
+              <span className="font-ui text-slate-400 text-left">Watch <br />Showcase Film</span>
             </div>
           </div>
         </motion.div>
@@ -225,7 +225,7 @@ const HomeView = ({ navigate, onOpenForm }) => (
           {/* Awards Segment */}
           <div className="space-y-10">
             <div className="flex items-end justify-between border-b border-white/10 pb-6">
-              <h2 className="font-h3 italic uppercase">MIHAS Awards 2025</h2>
+              <h2 className="font-h3 uppercase">MIHAS Awards 2025</h2>
               <Button variant="ghost" onClick={() => navigate('awards')} className="text-orange-400 hover:text-white group hidden sm:flex">The Ceremony <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform" /></Button>
             </div>
             <Card className="bg-slate-800 border-slate-700 text-white p-0 overflow-hidden ring-1 ring-white/5 shadow-2xl hover:shadow-orange-900/10 transition-all">
@@ -236,13 +236,13 @@ const HomeView = ({ navigate, onOpenForm }) => (
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
                   <div className="absolute bottom-6 left-6 md:left-8">
                     <div className="bg-orange-600 text-white font-ui px-4 py-1.5 rounded-full mb-2 inline-block">Event Highlight</div>
-                    <h3 className="font-h3 italic uppercase leading-none">Global Excellence</h3>
+                    <h3 className="font-h3 uppercase leading-none">Global Excellence</h3>
                   </div>
                 </div>
               </Link>
               <div className="p-8 md:p-10 space-y-6">
                 <Link href="/news/news1" className="block hover:text-orange-500 transition-colors">
-                  <h3 className="font-h3 italic uppercase underline decoration-orange-500/30 underline-offset-8 leading-tight">Excellence, Innovation and Sustainability Take Centre Stage at MIHAS Awards 2025</h3>
+                  <h3 className="font-h3 uppercase underline decoration-orange-500/30 underline-offset-8 leading-tight">Excellence, Innovation and Sustainability Take Centre Stage at MIHAS Awards 2025</h3>
                 </Link>
                 <p className="text-slate-400 leading-relaxed font-medium">The Malaysia International Halal Showcase (MIHAS) Awards 2025 concluded with a celebration of excellence across various halal sectors, setting new benchmarks for the industry.</p>
                 <Button className="bg-white text-slate-900 hover:bg-orange-600 hover:text-white" onClick={() => navigate('awards')}>View All Winners</Button>
@@ -253,13 +253,13 @@ const HomeView = ({ navigate, onOpenForm }) => (
           {/* News list */}
           <div className="space-y-10 lg:pt-2">
             <div className="space-y-6">
-              <h2 className="font-h3 text-white border-l-4 border-orange-500 pl-4 uppercase italic">Press Highlights</h2>
+              <h2 className="font-h3 text-white border-l-4 border-orange-500 pl-4 uppercase">Press Highlights</h2>
               <div className="space-y-2">
                 {newsData.slice(0, 4).map((news, i) => (
                   <Link key={i} href={`/news/${news.slug}`} className="group flex items-center justify-between p-6 rounded-2xl bg-slate-800/40 hover:bg-slate-800 cursor-pointer border border-white/5 transition-all">
                     <div className="space-y-1 pr-4">
-                      <div className="text-orange-500 font-label italic">{news.date}</div>
-                      <div className="font-h4 group-hover:text-white transition-colors uppercase italic text-sm">
+                      <div className="text-orange-500 font-label">{news.date}</div>
+                      <div className="font-h4 group-hover:text-white transition-colors uppercase text-sm">
                         {news.title}
                       </div>
                     </div>
@@ -274,8 +274,8 @@ const HomeView = ({ navigate, onOpenForm }) => (
         {/* Refined Blog Section */}
         <div className="space-y-12">
           <div className="text-center space-y-4">
-            <h3 className="text-orange-600 font-label italic">Knowledge Center</h3>
-            <h2 className="font-h2 italic uppercase underline decoration-white/10 underline-offset-[12px]">Latest Stories</h2>
+            <h3 className="text-orange-600 font-label">Knowledge Center</h3>
+            <h2 className="font-h2 uppercase underline decoration-white/10 underline-offset-[12px]">Latest Stories</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-10">
             {blogs.slice(0, 3).map((blog, i) => (
@@ -287,11 +287,11 @@ const HomeView = ({ navigate, onOpenForm }) => (
                       <div className="absolute inset-0 bg-orange-600/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     </div>
                     <div className="p-8 flex flex-col flex-grow">
-                      <span className="font-label text-slate-500 group-hover:text-orange-500 italic transition-colors">{blog.date}</span>
-                      <h3 className="font-h4 mt-4 mb-4 group-hover:text-white transition-colors line-clamp-2 uppercase italic">{blog.title}</h3>
-                      <p className="font-body-sm text-slate-400 line-clamp-3 mb-8 italic">{blog.excerpt}</p>
+                      <span className="font-label text-slate-500 group-hover:text-orange-500 transition-colors">{blog.date}</span>
+                      <h3 className="font-h4 mt-4 mb-4 group-hover:text-white transition-colors line-clamp-2 uppercase">{blog.title}</h3>
+                      <p className="font-body-sm text-slate-400 line-clamp-3 mb-8">{blog.excerpt}</p>
                       <div className="mt-auto flex items-center justify-between pt-6 border-t border-white/5">
-                        <div className="flex items-center gap-2 font-label text-orange-500 italic group-hover:gap-4 transition-all">
+                        <div className="flex items-center gap-2 font-label text-orange-500 group-hover:gap-4 transition-all">
                           Read More <ArrowRight size={14} />
                         </div>
                         <div className="font-label text-slate-600">Article</div>
@@ -312,8 +312,8 @@ const HomeView = ({ navigate, onOpenForm }) => (
     {/* Dedicated MIHAS Insight Section */}
     <section className="py-20 bg-orange-600 text-white px-6">
       <div className="max-w-4xl mx-auto text-center space-y-8">
-        <h2 className="font-h2 italic uppercase tracking-tighter">MIHAS Insight</h2>
-        <p className="font-body-lg text-orange-100 italic">Industry reports and exclusive show updates delivered directly to your inbox.</p>
+        <h2 className="font-h2 uppercase tracking-tighter">MIHAS Insight</h2>
+        <p className="font-body-lg text-orange-100">Industry reports and exclusive show updates delivered directly to your inbox.</p>
         <div className="flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto pt-6">
           <input
             type="email"
@@ -330,7 +330,7 @@ const HomeView = ({ navigate, onOpenForm }) => (
     {/* Global Network Section */}
     <section className="py-24 bg-slate-50 border-t border-slate-200">
       <div className="text-center mb-16 px-6 space-y-4">
-        <h2 className="font-h2 text-slate-900 italic uppercase">Strategic Partnerships</h2>
+        <h2 className="font-h2 text-slate-900 uppercase">Strategic Partnerships</h2>
         <p className="text-slate-500 font-label">Empowering the Halal Ecosystem through Global Collaboration</p>
       </div>
       <SponsorShowcase />

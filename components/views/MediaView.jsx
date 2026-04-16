@@ -27,13 +27,13 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                         {subView === 'registration' && (
                             <div className="max-w-6xl mx-auto space-y-12">
                                 <div className="text-center max-w-2xl mx-auto">
-                                    <h2 className="font-h1 text-black mb-4 italic uppercase">Media Accreditation</h2>
+                                    <h2 className="font-h1 text-black mb-4 uppercase">Media Accreditation</h2>
                                     <p className="font-body text-black">Join over 200 global media outlets covering the world's premier Halal showcase. Register now for exclusive access.</p>
                                 </div>
                                 <div className="grid lg:grid-cols-5 gap-8">
                                     <div className="lg:col-span-2 space-y-6">
                                         <Card className="p-8 bg-slate-900 text-white border-slate-800 shadow-xl">
-                                            <h3 className="font-h4 mb-6 flex items-center gap-2 text-orange-400 italic uppercase"><Info size={20} /> Media Privileges</h3>
+                                            <h3 className="font-h4 mb-6 flex items-center gap-2 text-orange-400 uppercase"><Info size={20} /> Media Privileges</h3>
                                             <ul className="space-y-4">
                                                 {[
                                                     "Access to dedicated Media Lounge",
@@ -50,7 +50,7 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                                             </ul>
                                         </Card>
                                         <div className="p-8 bg-orange-50 rounded-[32px] border border-orange-100 shadow-sm">
-                                            <h4 className="font-h4 text-slate-900 mb-2 italic uppercase">Media Kit 2025</h4>
+                                            <h4 className="font-h4 text-slate-900 mb-2 uppercase">Media Kit 2025</h4>
                                             <p className="font-body-sm text-slate-600 mb-6">Download official logos, event photos, and pre-show press releases.</p>
                                             <Button variant="outline" className="w-full bg-white border-orange-200 text-orange-600 hover:bg-orange-50 group">
                                                 Download Assets <Download size={16} className="ml-2 group-hover:translate-y-0.5 transition-transform" />
@@ -59,28 +59,28 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                                     </div>
 
                                     <Card className="lg:col-span-3 p-8 md:p-10 border-slate-200">
-                                        <h3 className="font-h3 text-slate-900 mb-8 flex items-center gap-3 italic uppercase"><Mail className="text-orange-500" /> Apply For Pass</h3>
+                                        <h3 className="font-h3 text-slate-900 mb-8 flex items-center gap-3 uppercase"><Mail className="text-orange-500" /> Apply For Pass</h3>
                                         <div className="space-y-6">
                                             <div className="grid md:grid-cols-2 gap-4">
                                                 <div className="space-y-2">
-                                                    <label className="font-label text-slate-400 italic">First Name</label>
+                                                    <label className="font-label text-slate-400">First Name</label>
                                                     <input type="text" className="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-50 transition-all font-body" placeholder="John" />
                                                 </div>
                                                 <div className="space-y-2">
-                                                    <label className="font-label text-slate-400 italic">Last Name</label>
+                                                    <label className="font-label text-slate-400">Last Name</label>
                                                     <input type="text" className="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-50 transition-all font-body" placeholder="Doe" />
                                                 </div>
                                             </div>
                                             <div className="space-y-2">
-                                                <label className="font-label text-slate-400 italic">Media Organisation</label>
+                                                <label className="font-label text-slate-400">Media Organisation</label>
                                                 <input type="text" className="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-50 transition-all font-body" placeholder="e.g. News Agency, TV Station" />
                                             </div>
                                             <div className="space-y-2">
-                                                <label className="font-label text-slate-400 italic">Email Address</label>
+                                                <label className="font-label text-slate-400">Email Address</label>
                                                 <input type="email" className="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl outline-none focus:border-orange-500 focus:ring-4 focus:ring-orange-50 transition-all font-body" placeholder="john@media.com" />
                                             </div>
                                             <Button className="w-full shadow-lg shadow-orange-900/10" onClick={() => onOpenForm('media')}>Submit Registration <ArrowRight size={18} className="ml-2" /></Button>
-                                            <p className="font-label text-slate-400 text-center italic mt-4">Verification may take up to 3 working days</p>
+                                            <p className="font-label text-slate-400 text-center mt-4">Verification may take up to 3 working days</p>
                                         </div>
                                     </Card>
                                 </div>
@@ -91,7 +91,7 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                             <div className="space-y-12">
                                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-slate-200 pb-8">
                                     <div>
-                                        <h2 className="font-h2 text-slate-900 mb-2 italic uppercase">Press Releases</h2>
+                                        <h2 className="font-h2 text-slate-900 mb-2 uppercase">Press Releases</h2>
                                         <p className="font-body text-slate-500">Official announcements and news from the organiser.</p>
                                     </div>
                                     <Button variant="outline">Filter By Category</Button>
@@ -110,9 +110,9 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                                                         <Clock size={12} /> {news.date}
                                                     </div>
                                                 </div>
-                                                <h3 className="font-h4 text-slate-900 mb-4 line-clamp-2 group-hover:text-orange-600 transition-colors uppercase italic">{news.title}</h3>
+                                                <h3 className="font-h4 text-slate-900 mb-4 line-clamp-2 group-hover:text-orange-600 transition-colors uppercase">{news.title}</h3>
                                                 <p className="font-body-sm text-slate-500 mb-6 line-clamp-3">{news.excerpt}</p>
-                                                <div className="mt-auto flex items-center gap-2 font-label text-slate-400 group-hover:text-orange-600 transition-colors italic">
+                                                <div className="mt-auto flex items-center gap-2 font-label text-slate-400 group-hover:text-orange-600 transition-colors">
                                                     Read More <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                                                 </div>
                                             </div>
@@ -125,7 +125,7 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                         {subView === 'blog' && (
                             <div className="space-y-12">
                                 <div className="text-center max-w-2xl mx-auto mb-16">
-                                    <h2 className="font-h1 text-black mb-4 italic uppercase">MIHAS Insight</h2>
+                                    <h2 className="font-h1 text-black mb-4 uppercase">MIHAS Insight</h2>
                                     <p className="font-body text-black">Thought leadership and deep dives into the global halal economy.</p>
                                 </div>
                                 <div className="grid md:grid-cols-2 gap-10">
@@ -136,11 +136,11 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                                                 <div className="absolute inset-0 bg-orange-600/10 group-hover:bg-transparent transition-colors"></div>
                                             </div>
                                             <div className="p-8 flex flex-col flex-grow">
-                                                <div className="text-black/50 font-label mb-4 italic">{blog.date}</div>
-                                                <h3 className="font-h4 text-black mb-4 group-hover:text-orange-600 transition-colors italic uppercase">{blog.title}</h3>
-                                                <p className="font-body-sm text-black/70 mb-8 line-clamp-3 italic">{blog.excerpt}</p>
+                                                <div className="text-black/50 font-label mb-4">{blog.date}</div>
+                                                <h3 className="font-h4 text-black mb-4 group-hover:text-orange-600 transition-colors uppercase">{blog.title}</h3>
+                                                <p className="font-body-sm text-black/70 mb-8 line-clamp-3">{blog.excerpt}</p>
                                                 <div className="mt-auto flex items-center justify-between pt-6 border-t border-slate-100">
-                                                    <span className="font-label text-black/50 italic">{blog.author}</span>
+                                                    <span className="font-label text-black/50">{blog.author}</span>
                                                     <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-all">
                                                         <ArrowRight size={18} />
                                                     </div>
@@ -156,7 +156,7 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                             <div className="space-y-12">
                                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-8 bg-white p-8 rounded-[32px] border border-slate-200 shadow-sm">
                                     <div>
-                                        <h2 className="font-h2 text-slate-900 italic uppercase">Multimedia Archives</h2>
+                                        <h2 className="font-h2 text-slate-900 uppercase">Multimedia Archives</h2>
                                         <p className="font-body-sm text-slate-500">Official collection from MIHAS 2024 HIGHLIGHTS</p>
                                     </div>
                                     <div className="flex bg-slate-100 p-1.5 rounded-2xl shadow-inner">
@@ -172,7 +172,7 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                                                 <img src={img.src} alt={img.alt} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                                                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/80 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                                 <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center opacity-0 group-hover:opacity-100 transition-all translate-y-4 group-hover:translate-y-0">
-                                                    <p className="text-white font-label mb-4 italic">{img.alt}</p>
+                                                    <p className="text-white font-label mb-4">{img.alt}</p>
                                                     <div className="w-12 h-12 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-white"><Download size={20} /></div>
                                                 </div>
                                             </div>
@@ -187,11 +187,11 @@ const MediaView = ({ subView, setSubView, onOpenForm }) => {
                                                     <div className="relative z-10 w-16 h-16 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center text-white group-hover:scale-110 group-hover:bg-orange-600 group-hover:border-orange-500 transition-all duration-500">
                                                         <Video size={24} fill="currentColor" />
                                                     </div>
-                                                    <div className="absolute bottom-4 right-4 bg-black/60 text-white font-label px-3 py-1.5 rounded-full backdrop-blur-md italic">{vid.duration}</div>
+                                                    <div className="absolute bottom-4 right-4 bg-black/60 text-white font-label px-3 py-1.5 rounded-full backdrop-blur-md">{vid.duration}</div>
                                                 </div>
                                                 <div className="p-8 text-center">
-                                                    <h4 className="font-h4 text-slate-900 group-hover:text-orange-600 transition-colors uppercase italic">{vid.title}</h4>
-                                                    <div className="mt-6 flex items-center justify-center gap-2 font-label text-slate-300 italic">
+                                                    <h4 className="font-h4 text-slate-900 group-hover:text-orange-600 transition-colors uppercase">{vid.title}</h4>
+                                                    <div className="mt-6 flex items-center justify-center gap-2 font-label text-slate-300">
                                                         <Clock size={12} /> MIHAS 2024 RECAP
                                                     </div>
                                                 </div>

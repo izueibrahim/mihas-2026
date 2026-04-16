@@ -76,10 +76,10 @@ const AwardsView = ({ onOpenForm }) => (
             <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} variants={{ visible: { transition: { staggerChildren: 0.15 } } }} className="grid md:grid-cols-2 gap-8">
                 <motion.div variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }} className="h-full">
                     <Card className="p-10 bg-slate-900 text-white border-slate-800 rounded-[40px] shadow-2xl h-full">
-                        <h3 className="font-h4 text-orange-400 mb-8 uppercase italic underline underline-offset-8 decoration-orange-400/30">Winners' Benefits</h3>
+                        <h3 className="font-h4 text-orange-400 mb-8 uppercase underline underline-offset-8 decoration-orange-400/30">Winners' Benefits</h3>
                         <div className="space-y-8">
                             <div>
-                                <h4 className="font-label text-white mb-4 pb-2 border-b border-slate-700 flex items-center justify-between italic">For Malaysian Companies <div className="w-2 h-2 rounded-full bg-orange-500"></div></h4>
+                                <h4 className="font-label text-white mb-4 pb-2 border-b border-slate-700 flex items-center justify-between">For Malaysian Companies <div className="w-2 h-2 rounded-full bg-orange-500"></div></h4>
                                 <ul className="space-y-3 font-body-sm text-slate-300">
                                     <li className="flex gap-3"><span className="text-orange-500">✓</span> Trophy and Certificate during Award Ceremony</li>
                                     <li className="flex gap-3"><span className="text-orange-500">✓</span> Featured in MATRADE's social media platforms</li>
@@ -104,7 +104,7 @@ const AwardsView = ({ onOpenForm }) => (
 
                 <motion.div variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }} className="h-full">
                     <Card className="p-10 rounded-[40px] border-slate-200 h-full">
-                        <h3 className="font-h4 text-slate-900 mb-10 uppercase italic underline underline-offset-8 decoration-orange-500/20">How to Participate</h3>
+                        <h3 className="font-h4 text-slate-900 mb-10 uppercase underline underline-offset-8 decoration-orange-500/20">How to Participate</h3>
                         <div className="space-y-8">
                             {[
                                 { step: "01", title: "Visit the Portal", desc: "Access the MIHAS Awards portal at official website." },
@@ -114,8 +114,8 @@ const AwardsView = ({ onOpenForm }) => (
                                 <div key={i} className="flex gap-6 items-start">
                                     <div className="w-12 h-12 rounded-2xl bg-orange-100 text-orange-600 font-label flex items-center justify-center shrink-0 shadow-sm">{item.step}</div>
                                     <div className="space-y-1">
-                                        <h4 className="font-h4 text-slate-900 uppercase italic">{item.title}</h4>
-                                        <p className="font-body-sm text-slate-500 italic">{item.desc}</p>
+                                        <h4 className="font-h4 text-slate-900 uppercase">{item.title}</h4>
+                                        <p className="font-body-sm text-slate-500">{item.desc}</p>
                                     </div>
                                 </div>
                             ))}

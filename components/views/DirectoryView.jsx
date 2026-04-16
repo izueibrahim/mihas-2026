@@ -22,7 +22,7 @@ const DirectoryView = ({ onOpenForm }) => {
                                 <FileText size={26} />
                             </div>
                             <div>
-                                <h3 className="font-h3 italic uppercase text-slate-900 leading-none">MIHAS 2025 e-Directory</h3>
+                                <h3 className="font-h3 uppercase text-slate-900 leading-none">MIHAS 2025 e-Directory</h3>
                                 <p className="font-label text-slate-500 text-sm tracking-wider uppercase mt-2">Official Exhibitor Guide</p>
                             </div>
                         </div>
