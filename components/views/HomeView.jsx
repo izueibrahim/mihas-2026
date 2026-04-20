@@ -30,10 +30,7 @@ const HomeView = ({ navigate, onOpenForm }) => (
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full flex-grow flex flex-col justify-center">
         <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: 'easeOut' }} className="inline-flex items-center gap-3 px-6 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mb-8">
-            <div className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></div>
-            <span className="font-label text-white">23 - 26 September 2026 • MITEC, Kuala Lumpur</span>
-          </motion.div>
+
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -44,14 +41,21 @@ const HomeView = ({ navigate, onOpenForm }) => (
             {/* ROW 1: Your "h1" (Logo + MIHAS) */}
             <span className="flex items-center justify-center gap-3 md:gap-5">
               {/* Change 'mihas-logo.png' to your actual file name! */}
-              <img src="images/mihas-logo/mihas-logo.png" alt="MIHAS Logo" className="h-16 md:h-20 w-auto object-contain" />
-              <span className="tracking-wider text-6xl md:text-7xl font-bold">MIHAS</span>
+              <img src="images/mihas-logo/MHIAS-22-2026-Masthead-notagline.png" alt="MIHAS Logo" className="h-16 md:h-40 w-auto object-contain" />
+              {/* <span className="tracking-wider text-6xl md:text-7xl font-bold">MIHAS</span> */}
             </span>
 
+            {/* ROW 1.5: Date and place */}
+            <br></br>
+            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: 'easeOut' }} className="inline-flex items-center gap-3 px-6 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mb-8">
+              <div className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></div>
+              <span className="font-label text-white" style={{ fontSize: '0.9rem' }}>23 - 26 September 2026 &nbsp;•&nbsp; MITEC, Kuala Lumpur</span>
+            </motion.div>
+
             {/* ROW 2: Your "h2" (Subtitle) */}
-            <span className="block text-lg md:text-xl font-normal mt-2 tracking-wide text-white/90">
+            {/* <span className="block text-lg md:text-xl font-normal mt-2 tracking-wide text-white/90">
               Malaysia International <span className="text-orange-500 font-medium">Halal</span> Showcase
-            </span>
+            </span> */}
           </motion.h1>
 
           <motion.div
@@ -61,12 +65,12 @@ const HomeView = ({ navigate, onOpenForm }) => (
             className="text-center mb-12 max-w-4xl mx-auto flex flex-col items-center"
           >
             {/* ROW 1: Smaller */}
-            <span className="block text-2xl md:text-3xl text-white/90 font-medium mb-1">
+            {/* <span className="block text-2xl md:text-3xl text-white/90 font-medium mb-1">
               Join the World's
-            </span>
+            </span> */}
 
             {/* ROW 2: BIGGER */}
-            <span className="block text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-wide">
+            <span className="block text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-wide" style={{ fontSize: '2.6rem' }}>
               Shaping Trust, Driving Innovation
             </span>
           </motion.div>
@@ -91,17 +95,17 @@ const HomeView = ({ navigate, onOpenForm }) => (
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-white/40">
         <MousePointer2 size={32} />
       </div>
-    </section>
+    </section >
 
     {/* Intro & Global Impact Section */}
-    <section className="py-24 px-6 bg-slate-50 border-b border-slate-100 overflow-hidden">
+    < section className="py-24 px-6 bg-slate-50 border-b border-slate-100 overflow-hidden" >
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
         <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8 }} className="space-y-8">
           <h3 className="text-orange-600 font-label">Why MIHAS 2026</h3>
           <h2 className="font-h1 text-slate-900">
             The World's Largest <br /> Halal Showcase.
           </h2>
-          <p className="font-body-lg text-slate-500">The 22nd edition of MIHAS will be a 4-day trade showcase held in Kuala Lumpur, Malaysia, alongside the MIHAS Virtual platform. Since 2004, we've set the standard for Halal excellence.</p>
+          <p className="font-body-lg text-slate-500">Welcome to the 22nd edition of MIHAS, the world’s premier halal trade platform. In 2026, we are redefining the global halal economy by integrating trust, governance, and innovation into the very fabric of international trade.</p>
           <div className="pt-4">
             <Button variant="outline" className="border-slate-200" onClick={() => navigate('about')}>About MIHAS Excellence</Button>
           </div>
@@ -115,10 +119,10 @@ const HomeView = ({ navigate, onOpenForm }) => (
           ))}
         </motion.div>
       </div>
-    </section>
+    </section >
 
     {/* Strategic 3 CTAs Block */}
-    <section className="w-full">
+    < section className="w-full" >
       <div className="grid md:grid-cols-3 h-auto md:h-[450px]">
         {/* CTA 1 */}
         <motion.div
@@ -191,18 +195,18 @@ const HomeView = ({ navigate, onOpenForm }) => (
           <div className="relative z-20 space-y-8 text-center">
             <h3 className="font-h2 uppercase leading-none text-slate-900 underline decoration-orange-500/20 underline-offset-8">At a <br />Glance</h3>
             <div className="flex items-center justify-center gap-6">
-              <button className="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full bg-slate-900 text-white flex items-center justify-center hover:scale-110 shadow-2xl transition-all group-hover:bg-orange-600">
+              <a href="https://www.youtube.com/watch?v=7jK7GoFBQzI" target="_blank" rel="noopener noreferrer"><button className="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full bg-slate-900 text-white flex items-center justify-center hover:scale-110 shadow-2xl transition-all group-hover:bg-orange-600">
                 <Play className="ml-1" size={28} />
-              </button>
+              </button></a>
               <span className="font-ui text-slate-400 text-left">Watch <br />Showcase Film</span>
             </div>
           </div>
         </motion.div>
       </div>
-    </section>
+    </section >
 
     {/* Word from CEO - Premium Quote Section */}
-    <motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 1 }} className="py-32 bg-white px-6 relative overflow-hidden font-serif">
+    < motion.section initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 1 }} className="py-32 bg-white px-6 relative overflow-hidden font-serif" >
       <div className="absolute left-10 top-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none">
         <Quote size={400} />
       </div>
@@ -216,10 +220,10 @@ const HomeView = ({ navigate, onOpenForm }) => (
           <div className="text-orange-600 font-label">CEO DinarStandard USA</div>
         </div>
       </div>
-    </motion.section>
+    </motion.section >
 
     {/* Blog & News Dynamic Highlight */}
-    <section className="py-32 bg-slate-900 text-white px-6">
+    < section className="py-32 bg-slate-900 text-white px-6" >
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 mb-24 items-start">
           {/* Awards Segment */}
@@ -307,10 +311,10 @@ const HomeView = ({ navigate, onOpenForm }) => (
           </div>
         </div>
       </div>
-    </section>
+    </section >
 
     {/* Dedicated MIHAS Insight Section */}
-    <section className="py-20 bg-orange-600 text-white px-6">
+    < section className="py-20 bg-orange-600 text-white px-6" >
       <div className="max-w-4xl mx-auto text-center space-y-8">
         <h2 className="font-h2 uppercase tracking-tighter">MIHAS Insight</h2>
         <p className="font-body-lg text-orange-100">Industry reports and exclusive show updates delivered directly to your inbox.</p>
@@ -325,17 +329,17 @@ const HomeView = ({ navigate, onOpenForm }) => (
           </button>
         </div>
       </div>
-    </section>
+    </section >
 
     {/* Global Network Section */}
-    <section className="py-24 bg-slate-50 border-t border-slate-200">
+    {/* < section className="py-24 bg-slate-50 border-t border-slate-200" >
       <div className="text-center mb-16 px-6 space-y-4">
         <h2 className="font-h2 text-slate-900 uppercase">Strategic Partnerships</h2>
         <p className="text-slate-500 font-label">Empowering the Halal Ecosystem through Global Collaboration</p>
       </div>
       <SponsorShowcase />
-    </section>
-  </div>
+    </section > */}
+  </div >
 );
 
 export default HomeView;

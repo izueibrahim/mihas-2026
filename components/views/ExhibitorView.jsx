@@ -51,11 +51,11 @@ const ExhibitorView = ({ subView, setSubView, onOpenForm }) => {
                                             <p className="font-body mb-8 opacity-90">Secure your spot at MIHAS 2025. Standard and Premium booth allocations are filling up fast.</p>
                                             <Button variant="secondary" className="w-full shadow-lg" onClick={() => onOpenForm('exhibitor')}>Book My Space <ArrowRight size={18} className="ml-2" /></Button>
                                         </Card>
-                                        <Card className="p-8 bg-slate-900 text-white shadow-xl shadow-slate-900/40 relative overflow-hidden">
+                                        {/* <Card className="p-8 bg-slate-900 text-white shadow-xl shadow-slate-900/40 relative overflow-hidden">
                                             <h3 className="font-h3 mb-4 uppercase text-white">MIHAS Hybrid</h3>
                                             <p className="font-body mb-8 opacity-80">Take your presence beyond the physical floor with MIHAS Virtual and reach global buyers 24/7.</p>
                                             <Button className="w-full bg-white text-slate-900 hover:bg-slate-100 border-none">Learn About Hybrid</Button>
-                                        </Card>
+                                        </Card> */}
                                     </div>
                                 </div>
 

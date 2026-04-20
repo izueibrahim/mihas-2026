@@ -24,16 +24,25 @@ const AboutView = ({ subView, setSubView, onOpenForm }) => {
               <div className="grid lg:grid-cols-3 gap-12">
                 <div className="lg:col-span-2 space-y-8">
                   <div className="prose prose-lg max-w-none text-slate-700">
-                    <h2 className="font-h2 text-slate-900 mb-8  decoration-orange-500/30 underline underline-offset-8">The World's Largest Halal Showcase</h2>
-                    <p className="font-body text-slate-600">Since its inception in 2004, MIHAS has become an event for local and foreign businesses to thrive in the Halal trade and to contribute significantly to the global Halal economy.</p>
-                    <p className="font-body text-slate-600">In 2024, MIHAS had attracted over 43,000 trade visitors, resulted in total immediate and negotiated trade value of over RM4.30 billion.</p>
+                    <h2 className="font-h2 text-slate-900 mb-8  decoration-orange-500/30 underline underline-offset-8">Global Blueprint Platform for Trust</h2>
+                    <p className="font-body text-slate-600">We are moving beyond scale to substance. This year’s showcase is built on three strategic pillars designed to future-proof your business:</p>
+                    <p className="font-body text-slate-600">
+                      <ul style={{ paddingLeft: '50px' }}>
+                        <li><b>Shaping Trust:</b> A "regulated-by-design" approach ensures every product is pre-vetted for integrity, traceability, and global compliance.</li>
+                        <li><b>Pioneer Leadership:</b> Leveraging 22 years of expertise and Malaysia's institutional strengths to set global halal standards.</li>
+                        <li><b>Driving Innovation:</b> Utilizing Artificial Intelligence (AI) for smarter business matching and more.</li>
+                      </ul>
+                    </p>
                     <div className="bg-orange-50 border-l-4 border-orange-500 p-8 my-10 rounded-r-3xl">
-                      <p className="text-orange-900 font-h4">"MIHAS is a robust marketplace for both international and local players to seize opportunities beyond Halal food including Halal pharmaceutical, medical devices, finance, modest fashion, personal care and cosmetics, green technologies and even Muslim-friendly tourism."</p>
+                      <p className="text-orange-900 font-h4">"MIHAS has never been just about filling halls or setting records. It has always been about giving buyers and exporters the confidence that what they see is genuinely ready for the world."</p>
                     </div>
-                    <p className="font-body text-slate-600">The 21st MIHAS will place special emphasis on the agenda of helping local and international players look to innovation and sustainable initiatives to spearhead steady growth for the Halal economy.</p>
+                    <p className="font-body text-slate-600" style={{ paddingLeft: '50px' }}><b>— Yang Berhormat Datuk Seri Johari Abdul Ghani</b>
+                      Minister of Investment, Trade and Industry</p><br></br>
 
-                    <h3 className="font-h3 text-slate-900 mt-12 mb-6 uppercase">MIHAS 2025 - The Biggest and Boldest Edition</h3>
-                    <p className="font-body text-slate-600">MIHAS 2025 Hybrid Edition combines the best of both conventional exhibition and virtual version. Featuring physical exhibitions together with exhibition booths with full multimedia microsite for product and services showcase.</p>
+                    <p className="font-body text-slate-600">With MIHAS 2026, the focus is shifting from size alone to a stronger emphasis on trust, governance, and measurable outcomes – positioning the showcase as a high-integrity platform where global buyers and exporters can engage with confidence.</p>
+
+                    <h3 className="font-h3 text-slate-900 mt-12 mb-6">Shaping Trust, Driving Innovation</h3>
+                    <p className="font-body text-slate-600">The upcoming edition is targeting more than RM4.3 billion in trade, bringing together over 1,700 booths and 40,000 trade visitors from around the world across 14 Halal industry clusters, from food and beverages and pharmaceuticals to Islamic finance, modest fashion, technology, and services.</p>
 
                     <div className="flex flex-wrap gap-4 mt-12">
                       <Button className="shadow-xl shadow-orange-900/10" onClick={() => onOpenForm('exhibitor')}>Book Exhibition Space</Button>
