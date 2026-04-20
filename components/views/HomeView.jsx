@@ -67,7 +67,7 @@ const HomeView = ({ navigate, onOpenForm }) => (
 
             {/* ROW 2: BIGGER */}
             <span className="block text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-wide">
-              Biggest <span className="text-orange-500">Halal</span> Showcase
+              Shaping Trust, Driving Innovation
             </span>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.6, ease: 'easeOut' }} className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
