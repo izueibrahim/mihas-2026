@@ -97,9 +97,9 @@ const HomeView = ({ navigate, onOpenForm }) => (
     <section className="py-24 px-6 bg-slate-50 border-b border-slate-100 overflow-hidden">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
         <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.8 }} className="space-y-8">
-          <h3 className="text-orange-600 font-label">MIHAS Heritage</h3>
+          <h3 className="text-orange-600 font-label">Why MIHAS 2026</h3>
           <h2 className="font-h1 text-slate-900">
-            Global Halal <br />Leadership.
+            The World's Largest <br /> Halal Showcase.
           </h2>
           <p className="font-body-lg text-slate-500">The 22nd edition of MIHAS will be a 4-day trade showcase held in Kuala Lumpur, Malaysia, alongside the MIHAS Virtual platform. Since 2004, we've set the standard for Halal excellence.</p>
           <div className="pt-4">
