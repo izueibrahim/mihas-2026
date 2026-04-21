@@ -36,8 +36,7 @@ const AboutView = ({ subView, setSubView, onOpenForm }) => {
                     <div className="bg-orange-50 border-l-4 border-orange-500 p-8 my-10 rounded-r-3xl">
                       <p className="text-orange-900 font-h4">"MIHAS has never been just about filling halls or setting records. It has always been about giving buyers and exporters the confidence that what they see is genuinely ready for the world."</p>
                     </div>
-                    <p className="font-body text-slate-600" style={{ paddingLeft: '50px' }}><b>— Yang Berhormat Datuk Seri Johari Abdul Ghani</b>
-                      Minister of Investment, Trade and Industry</p><br></br>
+                    <p className="font-body text-slate-600" style={{ paddingLeft: '50px' }}><b>— Yang Berhormat Datuk Seri Johari Abdul Ghani</b> Minister of Investment, Trade and Industry</p><br></br>
 
                     <p className="font-body text-slate-600">With MIHAS 2026, the focus is shifting from size alone to a stronger emphasis on trust, governance, and measurable outcomes – positioning the showcase as a high-integrity platform where global buyers and exporters can engage with confidence.</p>
 

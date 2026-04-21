@@ -93,12 +93,12 @@ const VisitorView = ({ subView, setSubView, onOpenForm }) => {
                                     <div className="space-y-10">
                                         <div className="relative pl-6 border-l-2 border-orange-500">
                                             <div className="font-label text-orange-400 mb-2">Trade Days</div>
-                                            <div className="font-h4 text-white uppercase">17 - 19 Sept 2025</div>
+                                            <div className="font-h4 text-white uppercase">23 - 25 Sept 2026</div>
                                             <div className="font-body font-bold text-slate-400 mt-1">10:00 AM - 6:00 PM</div>
                                         </div>
                                         <div className="relative pl-6 border-l-2 border-slate-700">
                                             <div className="font-label text-slate-400 mb-2">Public Day</div>
-                                            <div className="font-h4 text-white uppercase">20 Sept 2025</div>
+                                            <div className="font-h4 text-white uppercase">26 Sept 2026</div>
                                             <div className="font-body font-bold text-slate-500 mt-1">10:00 AM - 6:00 PM</div>
                                         </div>
                                     </div>

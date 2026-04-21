@@ -134,13 +134,13 @@ const HomeView = ({ navigate, onOpenForm }) => (
         >
           <img
             src="/images/photos-gallery/why-should-you-exhibit-mihas.jpg"
-            alt="Exhibitor Incentives"
+            alt="Exhibitor Benefits"
             className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-slate-900/70 z-10 group-hover:bg-slate-900/50 transition-colors duration-500"></div>
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full translate-x-1/2 -translate-y-1/2 group-hover:scale-110 transition-transform duration-700 z-10"></div>
           <div className="relative z-20 space-y-8 text-center">
-            <h3 className="font-h2 uppercase leading-none text-white">Exhibitor<br />Incentives</h3>
+            <h3 className="font-h2 uppercase leading-none text-white">Exhibitor<br />Benefits</h3>
             <p className="text-white/80 font-medium uppercase tracking-tight">Unlock unparalleled access to OIC markets and beyond.</p>
             <Button
               className="bg-white text-slate-900 hover:bg-orange-600 hover:text-white mx-auto"
