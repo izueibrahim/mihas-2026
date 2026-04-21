@@ -41,13 +41,13 @@ export const sponsorsData = {
         {
             tier: "Supporting Partner",
             items: [
-                { name: "Air Liquide", logo: "/images/sponsors/air-liquide.png" }
+                { name: "Air Liquide", logo: "/images/sponsors/Air-Liquide.png" }
             ]
         },
         {
             tier: "Event Supporter",
             items: [
-                { name: "Oriental Kopi", logo: "/images/sponsors/oriental-kopi.png" }
+                { name: "Oriental Kopi", logo: "/images/sponsors/Oriental-Kopi.png" }
             ]
         },
         {
