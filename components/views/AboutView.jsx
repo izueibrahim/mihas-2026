@@ -25,13 +25,13 @@ const AboutView = ({ subView, setSubView, onOpenForm }) => {
                 <div className="lg:col-span-2 space-y-8">
                   <div className="prose prose-lg max-w-none text-slate-700">
                     <h2 className="font-h2 text-slate-900 mb-8  decoration-orange-500/30 underline underline-offset-8">Global Blueprint Platform for Trust</h2>
-                    <p className="font-body text-slate-600">We are moving beyond scale to substance. This year’s showcase is built on three strategic pillars designed to future-proof your business:</p>
-                    <p className="font-body text-slate-600">
-                      <ul style={{ paddingLeft: '50px' }}>
-                        <li><b>Shaping Trust:</b> A "regulated-by-design" approach ensures every product is pre-vetted for integrity, traceability, and global compliance.</li>
-                        <li><b>Pioneer Leadership:</b> Leveraging 22 years of expertise and Malaysia's institutional strengths to set global halal standards.</li>
-                        <li><b>Driving Innovation:</b> Utilizing Artificial Intelligence (AI) for smarter business matching and more.</li>
-                      </ul>
+                    <p className="font-body text-slate-600" style={{ paddingBottom: '10px' }}>We are moving beyond scale to substance. This year’s showcase is built on three strategic pillars designed to future-proof your business:</p>
+                    <p className="font-body text-slate-600" style={{ paddingLeft: '50px' }}>
+
+                      <li><b>Shaping Trust:</b> A "regulated-by-design" approach ensures every product is pre-vetted for integrity, traceability, and global compliance.</li>
+                      <li><b>Pioneer Leadership:</b> Leveraging 22 years of expertise and Malaysia's institutional strengths to set global halal standards.</li>
+                      <li><b>Driving Innovation:</b> Utilizing Artificial Intelligence (AI) for smarter business matching and more.</li>
+
                     </p>
                     <div className="bg-orange-50 border-l-4 border-orange-500 p-8 my-10 rounded-r-3xl">
                       <p className="text-orange-900 font-h4">"MIHAS has never been just about filling halls or setting records. It has always been about giving buyers and exporters the confidence that what they see is genuinely ready for the world."</p>

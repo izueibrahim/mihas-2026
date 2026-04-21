@@ -22,11 +22,11 @@ const GlobalOrganisersBar = () => {
         { name: "Malaysian Convention", logo: "/images/organisers/malaysian-convention.jpeg" },
         { name: "Visit Malaysia 2026", logo: "/images/organisers/visit-malaysia-2026.jpeg" },
         { name: "Meet in Malaysia", logo: "/images/organisers/meet-in-malaysia.png" },
-        { name: "FAMA", logo: "/images/organisers/fama.jpeg" },
+        // { name: "FAMA", logo: "/images/organisers/fama.jpeg" },
         { name: "Islamic Tourism Centre", logo: "/images/organisers/islamic-tourism.png" },
-        { name: "PDRM", logo: "/images/organisers/pdrm-police.jpeg" },
-        { name: "PERKESO", logo: "/images/organisers/perkeso.png" },
-        { name: "MYFutureJobs", logo: "/images/organisers/my-future-jobs.png" }
+        // { name: "PDRM", logo: "/images/organisers/pdrm-police.jpeg" },
+        // { name: "PERKESO", logo: "/images/organisers/perkeso.png" },
+        // { name: "MYFutureJobs", logo: "/images/organisers/my-future-jobs.png" }
     ];
 
     return (
