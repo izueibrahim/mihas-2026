@@ -332,13 +332,13 @@ const HomeView = ({ navigate, onOpenForm }) => (
     </section >
 
     {/* Global Network Section */}
-    {/* < section className="py-24 bg-slate-50 border-t border-slate-200" >
+    < section className="py-24 bg-slate-50 border-t border-slate-200" >
       <div className="text-center mb-16 px-6 space-y-4">
         <h2 className="font-h2 text-slate-900 uppercase">Strategic Partnerships</h2>
         <p className="text-slate-500 font-label">Empowering the Halal Ecosystem through Global Collaboration</p>
       </div>
       <SponsorShowcase />
-    </section > */}
+    </section >
   </div >
 );
 

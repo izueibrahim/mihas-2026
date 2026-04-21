@@ -39,6 +39,18 @@ export const sponsorsData = {
             ]
         },
         {
+            tier: "Supporting Partner",
+            items: [
+                { name: "Air Liquide", logo: "/images/sponsors/air-liquide.png" }
+            ]
+        },
+        {
+            tier: "Event Supporter",
+            items: [
+                { name: "Oriental Kopi", logo: "/images/sponsors/oriental-kopi.png" }
+            ]
+        },
+        {
             tier: "F&B Partner",
             items: [
                 { name: "Berjaya Food", logo: "/images/sponsors/berjaya-food.png" }
