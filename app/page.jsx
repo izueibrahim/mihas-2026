@@ -10,7 +10,7 @@ import AboutView from '../components/views/AboutView';
 // import ProgrammeView from '../components/views/ProgrammeView';
 // import DirectoryView from '../components/views/DirectoryView';
 // import AwardsView from '../components/views/AwardsView';
-// import InspView from '../components/views/InspView';
+import InspView from '../components/views/InspView';
 import VisitorView from '../components/views/VisitorView';
 import ExhibitorView from '../components/views/ExhibitorView';
 import MediaView from '../components/views/MediaView';

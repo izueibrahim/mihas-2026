@@ -109,8 +109,8 @@ const InspView = () => {
                                 </Card>
                                 <Card className="p-8 border-slate-200 hover:border-orange-200 transition-colors">
                                     <h3 className="font-label text-orange-600 mb-4 flex items-center gap-2 uppercase tracking-wider"><Calendar size={16} /> Date & Deadline</h3>
-                                    <p className="font-h4 text-slate-900">17 September 2025</p>
-                                    <p className="text-orange-600 font-label text-xs mt-2 bg-orange-50 px-3 py-1 rounded-full inline-block">Deadline: 30 June 2025</p>
+                                    <p className="font-h4 text-slate-900">17 September 2026</p>
+                                    <p className="text-orange-600 font-label text-xs mt-2 bg-orange-50 px-3 py-1 rounded-full inline-block">Deadline: 30 June 2026</p>
                                 </Card>
                                 <Card className="p-8 border-slate-200 hover:border-orange-200 transition-colors">
                                     <h3 className="font-label text-orange-600 mb-4 flex items-center gap-2 uppercase tracking-wider"><Clock size={16} /> Time</h3>
@@ -127,8 +127,8 @@ const InspView = () => {
                                 </Card>
                                 <Card className="p-8 border-slate-200 hover:border-blue-200 transition-colors">
                                     <h3 className="font-label text-blue-600 mb-4 flex items-center gap-2 uppercase tracking-wider"><Calendar size={16} /> Period & Deadline</h3>
-                                    <p className="font-h4 text-slate-900">1 April – 5 Nov 2025</p>
-                                    <p className="text-blue-600 font-label text-xs mt-2 bg-blue-50 px-3 py-1 rounded-full inline-block">Deadline: 5 Nov 2025</p>
+                                    <p className="font-h4 text-slate-900">1 April – 5 Nov 6</p>
+                                    <p className="text-blue-600 font-label text-xs mt-2 bg-blue-50 px-3 py-1 rounded-full inline-block">Deadline: 5 Nov 2026</p>
                                 </Card>
                                 <Card className="p-8 border-slate-200 hover:border-blue-200 transition-colors">
                                     <h3 className="font-label text-blue-600 mb-4 flex items-center gap-2 uppercase tracking-wider"><Users size={16} /> Interaction</h3>
@@ -229,7 +229,7 @@ const InspView = () => {
 
                     <div className="space-y-6">
                         <h3 className="font-h3 text-slate-900 px-2 uppercase">Ready to expand your market?</h3>
-                        <p className="font-body text-slate-600 px-2">Join INSP MIHAS 2025 and connect with top-tier buyers from all corners of the world. Limited slots available for premium matching.</p>
+                        <p className="font-body text-slate-600 px-2">Join INSP MIHAS 2026 and connect with top-tier buyers from all corners of the world. Limited slots available for premium matching.</p>
                         <div className="bg-white border rounded-3xl p-8 shadow-sm">
                             <h4 className="font-h4 text-slate-900 mb-4 uppercase">Registration Procedure</h4>
                             <div className="space-y-6">

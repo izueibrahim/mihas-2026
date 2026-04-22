@@ -30,7 +30,7 @@ export const navLinks = [
   // { id: 'programme', label: 'Show Programme' },
   // { id: 'directory', label: 'e-Directory' },
   // { id: 'awards', label: 'MIHAS Awards' },
-  // { id: 'insp', label: 'INSP' },
+  { id: 'insp', label: 'INSP' },
   { id: 'visitor', label: 'Visitor', defaultSub: 'why-visit', subs: visitorTabs },
   {
     id: 'exhibitor', label: 'Exhibitor', defaultSub: 'why-exhibit', subs: [
