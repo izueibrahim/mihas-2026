@@ -26,7 +26,7 @@ const ContactView = ({ subView, setSubView, onOpenForm }) => {
                                     <Card className="p-8 md:p-12 border-slate-200 shadow-xl shadow-slate-200/50">
                                         <div className="text-center max-w-2xl mx-auto mb-16">
                                             <h2 className="font-h2 text-slate-900 mb-4 uppercase">Get in Touch</h2>
-                                            <p className="font-body text-slate-500">Have questions about MIHAS 202? Our team is here to help you with any enquiries.</p>
+                                            <p className="font-body text-slate-500">Have questions about MIHAS 2026? Our team is here to help you with any enquiries.</p>
                                         </div>
                                         <div className="space-y-6">
                                             <div className="grid md:grid-cols-2 gap-4">
