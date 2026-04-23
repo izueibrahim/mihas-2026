@@ -26,7 +26,7 @@ const ContactView = ({ subView, setSubView, onOpenForm }) => {
                                     <Card className="p-8 md:p-12 border-slate-200 shadow-xl shadow-slate-200/50">
                                         <div className="text-center max-w-2xl mx-auto mb-16">
                                             <h2 className="font-h2 text-slate-900 mb-4 uppercase">Get in Touch</h2>
-                                            <p className="font-body text-slate-500">Have questions about MIHAS 2025? Our team is here to help you with any enquiries.</p>
+                                            <p className="font-body text-slate-500">Have questions about MIHAS 202? Our team is here to help you with any enquiries.</p>
                                         </div>
                                         <div className="space-y-6">
                                             <div className="grid md:grid-cols-2 gap-4">
@@ -73,7 +73,7 @@ const ContactView = ({ subView, setSubView, onOpenForm }) => {
                                                 <div className="w-12 h-12 bg-slate-50 text-slate-400 rounded-2xl flex items-center justify-center shrink-0 border border-slate-100"><Phone size={22} /></div>
                                                 <div>
                                                     <div className="font-label text-slate-400 mb-1">Hotline</div>
-                                                    <div className="font-body text-slate-800">+603 6211 9973</div>
+                                                    <div className="font-body text-slate-800">+603 9172 1598</div>
                                                 </div>
                                             </div>
                                             <div className="flex gap-5">
@@ -81,9 +81,10 @@ const ContactView = ({ subView, setSubView, onOpenForm }) => {
                                                 <div>
                                                     <div className="font-label text-slate-400 mb-1">Our Location</div>
                                                     <div className="font-body-sm text-slate-600 leading-relaxed mt-2">
-                                                        Qube Integrated Malaysia Sdn Bhd,<br />
-                                                        Level 1, MITEC, 8, Jalan Dutamas 2,<br />
-                                                        50480 Kuala Lumpur, Malaysia.
+                                                        8, Jalan 4/118B,<br />
+                                                        Desa Tun Razak,<br />
+                                                        56000, Kuala Lumpur,<br />
+                                                        Malaysia
                                                     </div>
                                                 </div>
                                             </div>

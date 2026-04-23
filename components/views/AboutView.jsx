@@ -40,7 +40,7 @@ const AboutView = ({ subView, setSubView, onOpenForm }) => {
 
                     <p className="font-body text-slate-600">With MIHAS 2026, the focus is shifting from size alone to a stronger emphasis on trust, governance, and measurable outcomes – positioning the showcase as a high-integrity platform where global buyers and exporters can engage with confidence.</p>
 
-                    <h3 className="font-h3 text-slate-900 mt-12 mb-6">Shaping Trust, Driving Innovation</h3>
+                    <h3 className="font-h3 text-slate-900 mt-12 mb-6">Shaping Trust, Driving Resilience</h3>
                     <p className="font-body text-slate-600">The upcoming edition is targeting more than RM4.3 billion in trade, bringing together over 1,700 booths and 40,000 trade visitors from around the world across 14 Halal industry clusters, from food and beverages and pharmaceuticals to Islamic finance, modest fashion, technology, and services.</p>
 
                     <div className="flex flex-wrap gap-4 mt-12">
